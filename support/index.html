@@ -16,7 +16,7 @@
   <header class="site-header is-scrolled" data-header>
     <a class="brand" href="/" aria-label="Siftroom 首页"><img src="/assets/icon-192.png" alt="" width="36" height="36"><span class="brand-lockup"><b>SIFTROOM</b><small>MAC · NATIVE</small></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span></span><span></span><span></span><span class="sr-only">打开导航</span></button>
-    <nav class="site-nav" id="site-nav" data-menu><a href="/#workflow">工作流</a><a href="/#compare">比较</a><a href="/privacy/">隐私</a><a href="/support/" aria-current="page">支持</a><a class="nav-cta" href="https://apps.apple.com/app/id6804907962">App Store <span>即将上线</span></a></nav>
+    <nav class="site-nav" id="site-nav" data-menu><a href="/#workflow">选片</a><a href="/#develop">显影</a><a href="/#filters">滤镜</a><a href="/#compare">比较</a><a href="/privacy/">隐私</a><a href="/support/" aria-current="page">支持</a><span class="nav-cta">即将上线</span></nav>
   </header>
 
   <main class="support-page" id="main">
@@ -37,6 +37,8 @@
             <article class="support-card"><b>开始选片</b><p>左右方向键浏览，P 保留、X 拒绝，再按同一个键取消。U 始终清除旗标。</p></article>
             <article class="support-card"><b>比较细节</b><p>选择两张照片后按 C。捏合缩放、双指平移，两张照片保持同步。</p></article>
             <article class="support-card"><b>批量交付</b><p>多选照片后统一调整或应用预设，导出时可设置基础名称与数字序列。</p></article>
+            <article class="support-card"><b>使用本地滤镜</b><p>从“窗口 → 滤镜库”导入 <code>.siftfilterpack</code>，或在滤镜工坊中创建自己的 RGB 与蒙板滤镜。</p></article>
+            <article class="support-card"><b>轻量显影</b><p>检查器中的曝光、分区色调、白平衡、清晰度、去雾、降噪与锐化均为非破坏调整。</p></article>
           </div>
         </section>
 
@@ -67,6 +69,9 @@
           <details><summary>Finder 里“在 Siftroom 中打开”没有出现怎么办？</summary><p>先将 Siftroom 放在“应用程序”目录并启动一次，然后前往系统设置 → 键盘 → 键盘快捷键 → 服务 → 文件和文件夹，勾选“在 Siftroom 中打开”。</p></details>
           <details><summary>为什么胶片条滑不动？</summary><p>只有内容超出胶片条宽度时才存在滚动距离。将鼠标放在胶片条上，可使用触控板左右或上下双指滑动；折叠组全部适配一屏时不会产生位移。</p></details>
           <details><summary>删除的照片还能恢复吗？</summary><p>Delete 会把照片移动到 macOS 废纸篓。立即按 ⌘Z 可撤销；也可以在废纸篓中手动放回，Siftroom 会监测目录变化并刷新。</p></details>
+          <details><summary>如何导入、创建或分享滤镜？</summary><p>打开“窗口 → 滤镜库”，可以导入本地 <code>.siftfilterpack</code>，也可以进入滤镜工坊创建滤镜。导出的滤镜包是普通文件，可通过论坛、网盘或聊天工具自行分享；Siftroom 不提供上传市场。</p></details>
+          <details><summary>滤镜包会运行第三方代码吗？</summary><p>不会。滤镜包只允许 Siftroom 定义的声明式 RGB、LUT 与蒙板参数，经过大小、类型和完整性校验后才会导入，不包含脚本、插件二进制或可执行模型。</p></details>
+          <details><summary>基础调整是否与 Adobe Camera Raw 数值兼容？</summary><p>不兼容。Siftroom 使用自己的摄影显影引擎：曝光采用 EV，高光、阴影、白色、黑色按亮度区域处理，对比度使用自适应中灰 S 曲线。它面向快速审阅和批量统一，不宣称复制 Adobe 的私有相机配置与 Process Version。</p></details>
           <details><summary>Siftroom 会上传照片或收集使用数据吗？</summary><p>不会。图像分析和显影在本地完成；应用不含账号、广告或第三方分析 SDK。只有你主动提交支持表单时，网站才会保存你填写的联系邮箱和问题内容。</p></details>
         </section>
 
@@ -93,6 +98,6 @@
     </div>
   </main>
 
-  <footer class="site-footer"><a class="brand footer-brand" href="/"><img src="/assets/icon-192.png" alt="" width="32" height="32"><span class="brand-lockup"><b>SIFTROOM</b><small>LIGHTWEIGHT PHOTO CULLING</small></span></a><div class="footer-links"><a href="/support/">支持</a><a href="/privacy/">隐私</a><a href="https://apps.apple.com/app/id6804907962">App Store</a></div><p>© 2026 Siftroom. Made for photographers on Mac.</p></footer>
+  <footer class="site-footer"><a class="brand footer-brand" href="/"><img src="/assets/icon-192.png" alt="" width="32" height="32"><span class="brand-lockup"><b>SIFTROOM</b><small>LIGHTWEIGHT PHOTO CULLING</small></span></a><div class="footer-links"><a href="/support/">支持</a><a href="/privacy/">隐私</a><a href="/changelog/">更新日志</a><span>即将上线</span></div><p>© 2026 Siftroom. Made for photographers on Mac.</p></footer>
 </body>
 </html>
