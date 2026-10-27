@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#080806">
   <link rel="canonical" href="https://siftroom.com/changelog/">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="/assets/site.css?v=20260902">
-  <script src="/assets/site.js?v=20260902" defer></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20261027">
+  <script src="/assets/site.js?v=20261027" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -28,6 +28,49 @@
 
     <div class="changelog-stack section-shell">
       <article class="release-entry">
+        <header><time datetime="2026-10-27">2026.10.27</time><span>1.1.0</span></header>
+        <div>
+          <p class="eyebrow">IMPORT / PROJECTS / LOCAL DENOISE</p>
+          <h2>从记忆卡，<br><em>到值得留下的照片。</em></h2>
+          <ul>
+            <li>新增导入中心：从记忆卡或文件夹预览导入，复制后逐文件读回 SHA-256 校验。</li>
+            <li>可选第二盘备份并独立校验，支持暂停、退出后继续和导出校验报告。来源文件保持原样。</li>
+            <li>RAW、JPEG 与 XMP 成组命名，支持内容去重，以及作者、版权、关键词等元数据模板。</li>
+            <li>新增项目工作区，记住选片进度、调整与上次浏览位置，复用本地分析；文件夹移动后可重新定位。</li>
+            <li>新增本地 AI 降噪，支持整体强度、亮度与颜色噪点控制、原始像素前后对比，以及已保留照片批量导出。</li>
+            <li>优化导入界面、日期与选项选择、降噪状态反馈和细节对比交互。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="release-entry">
+        <header><time datetime="2026-10-18">2026.10.18</time><span>1.0.4</span></header>
+        <div>
+          <p class="eyebrow">CLIENT SELECTION / PDF DELIVERY</p>
+          <h2>让客户勾选，<br><em>摄影师自动接回。</em></h2>
+          <ul>
+            <li>新增“导出客户选片包”，生成带水印预览、说明和可勾选 PDF。</li>
+            <li>客户只需打开 PDF、勾选照片、保存并发回，不需要网页、账号或 JSON 文件。</li>
+            <li>摄影师可用“导入客户选片”自动把客户勾选的照片标记为保留。</li>
+            <li>文件菜单补齐打开、导出、水印导出、导入选片、Finder 和取消操作的快捷键提示。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="release-entry">
+        <header><time datetime="2026-10-16">2026.10.16</time><span>1.0.3</span></header>
+        <div>
+          <p class="eyebrow">WATERMARK / PREVIEW</p>
+          <h2>先看到效果，<br><em>再按下导出。</em></h2>
+          <ul>
+            <li>导出面板新增实时水印预览，设置变化会立即反映到当前照片。</li>
+            <li>水印支持在预览图上自由拖动，九宫格按钮保留为快速定位入口。</li>
+            <li>可一键隐藏设置面板专注查看预览，位置、大小与不透明度继续跨会话记忆。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="release-entry">
         <header><time datetime="2026-10-13">2026.10.13</time><span>1.0.2</span></header>
         <div>
           <p class="eyebrow">WATERMARK / DELIVERY</p>
@@ -35,7 +78,7 @@
           <ul>
             <li>新增水印导出：按 ⌘⇧W 一键为照片叠加签名水印并导出。</li>
             <li>内置 siftroom 签名水印，也可在导出面板中换成自己的图片。</li>
-            <li>九宫格位置、缩放与不透明度可调，并随导出预设保存。</li>
+            <li>九宫格位置、缩放与不透明度可调，并随导出设置保存。</li>
             <li>修复滤镜编辑器在新版 Swift 工具链下的兼容性问题。</li>
           </ul>
         </div>

@@ -36,7 +36,7 @@
     if (window.location.hostname === "glenffi.github.io") {
       form.innerHTML = `
         <p><strong>临时公开支持通道</strong></p>
-        <p>主域名备案同步期间，请使用 GitHub 支持工单。工单内容公开，请勿填写邮箱、原片、序列号或其他敏感信息。</p>
+        <p>此镜像站不保存支持表单，请使用 GitHub 支持工单。工单内容公开，请勿填写邮箱、原片、序列号或其他敏感信息。</p>
         <p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">打开 Siftroom 支持工单</a></p>
       `;
       return;

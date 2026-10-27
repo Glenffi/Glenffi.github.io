@@ -8,8 +8,8 @@
   <meta name="theme-color" content="#080806">
   <link rel="canonical" href="https://siftroom.com/support/">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="/assets/site.css?v=20260902">
-  <script src="/assets/site.js?v=20260902" defer></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20261027">
+  <script src="/assets/site.js?v=20261027" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -27,7 +27,7 @@
     </header>
 
     <div class="support-layout">
-      <nav class="toc" aria-label="本页目录"><a href="#start">快速开始</a><a href="#shortcuts">快捷键</a><a href="#faq">常见问题</a><a href="#contact">联系支持</a></nav>
+      <nav class="toc" aria-label="本页目录"><a href="#start">快速开始</a><a href="#shortcuts">快捷键</a><a href="#import-help">导入与项目</a><a href="#denoise-help">AI 降噪</a><a href="#faq">常见问题</a><a href="#contact">联系支持</a></nav>
       <div class="content-stack">
         <section class="content-section" id="start">
           <p class="eyebrow">01 / START</p>
@@ -37,6 +37,8 @@
             <article class="support-card"><b>开始选片</b><p>左右方向键浏览，P 保留、X 拒绝，再按同一个键取消。U 始终清除旗标。</p></article>
             <article class="support-card"><b>比较细节</b><p>选择两张照片后按 C。捏合缩放、双指平移，两张照片保持同步。</p></article>
             <article class="support-card"><b>批量交付</b><p>多选照片后统一调整或应用预设，导出时可设置基础名称与数字序列。</p></article>
+            <article class="support-card"><b>添加水印</b><p>导出面板会实时预览水印效果。按 ⌘⇧W 开启水印导出，可直接拖动水印或使用九宫格快速定位。</p></article>
+            <article class="support-card"><b>客户选片</b><p>导出面板选择“导出客户选片包”，客户在 PDF 里勾选并保存发回；摄影师用“导入客户选片”自动标记原片。</p></article>
             <article class="support-card"><b>使用本地滤镜</b><p>从“窗口 → 滤镜库”导入 <code>.siftfilterpack</code>，或在滤镜工坊中创建自己的 RGB 与蒙板滤镜。</p></article>
             <article class="support-card"><b>轻量显影</b><p>检查器中的曝光、分区色调、白平衡、清晰度、去雾、降噪与锐化均为非破坏调整。</p></article>
           </div>
@@ -48,6 +50,8 @@
           <table class="shortcut-table">
             <thead><tr><th>操作</th><th>按键</th><th>说明</th></tr></thead>
             <tbody>
+              <tr><td>导入照片</td><td><kbd>⌘I</kbd></td><td>打开记忆卡与文件夹导入中心</td></tr>
+              <tr><td>项目</td><td><kbd>⌘⇧P</kbd></td><td>继续一次拍摄的选片进度</td></tr>
               <tr><td>前后浏览</td><td><kbd>←</kbd> <kbd>→</kbd></td><td>连续导航当前筛选结果</td></tr>
               <tr><td>保留 / 拒绝</td><td><kbd>P</kbd> <kbd>X</kbd></td><td>再次按下取消同一标记</td></tr>
               <tr><td>清除旗标</td><td><kbd>U</kbd></td><td>始终回到未标记</td></tr>
@@ -56,9 +60,29 @@
               <tr><td>胶片条</td><td><kbd>F</kbd></td><td>固定或恢复自动隐藏</td></tr>
               <tr><td>撤销</td><td><kbd>⌘Z</kbd></td><td>标记、调整与删除均可撤销</td></tr>
               <tr><td>导出</td><td><kbd>⌘E</kbd></td><td>打开批量 JPEG 导出</td></tr>
+              <tr><td>水印导出</td><td><kbd>⌘⇧W</kbd></td><td>打开并启用水印导出</td></tr>
+              <tr><td>导入客户选片</td><td><kbd>⌘⇧I</kbd></td><td>导入客户保存后发回的选片 PDF</td></tr>
+              <tr><td>在 Finder 中显示</td><td><kbd>⌘R</kbd></td><td>显示当前照片所在位置</td></tr>
+              <tr><td>取消导出</td><td><kbd>⌘.</kbd></td><td>取消导出或关闭导出面板</td></tr>
             </tbody>
           </table>
           <p>应用内快捷键可在 Siftroom → 设置 → 快捷键中修改。Finder 服务快捷键由 macOS 系统设置单独管理。</p>
+        </section>
+
+        <section class="content-section" id="import-help">
+          <p class="eyebrow">IMPORT / VERIFY / CONTINUE</p><h2>从记忆卡开始，<br>也能直接打开文件夹。</h2>
+          <p>在“文件 → 导入照片…”（⌘I）选择记忆卡或文件夹。先查看来源缩略图，选择工作盘和拍摄项目，再设置命名规则与可选元数据模板。直接用 ⌘O 打开照片文件夹仍然可用，不要求创建项目。</p>
+          <details><summary>导入校验和第二份备份如何工作？</summary><p>每个文件先复制到临时位置，写入完成后读回进行 SHA-256 校验，通过后才作为工作副本发布。第二份副本从已校验的工作副本复制，再独立读回校验。备份需选择另一卷；为了避免同一物理磁盘故障同时影响两份副本，建议使用另一块物理磁盘。校验不等同于长期备份或故障保险。</p></details>
+          <details><summary>导入中断后怎么办？什么时候可以拔卡？</summary><p>从导入记录中继续未完成的任务。程序会复核已完成文件，从未完成文件重新复制；需要时重新授权来源或备份目录。请等本次任务所需的副本全部完成并确认校验结果后再推出记忆卡。Siftroom 不删除来源照片，也不格式化记忆卡。</p></details>
+          <details><summary>重命名、去重和元数据会改动原文件吗？</summary><p>来源保持原样。RAW、JPEG 与配套 XMP 在目标中成组命名。可选内容去重会复用完全一致的已导入组，不覆盖已有选片和编辑。元数据模板默认补充空字段；原始 XMP 单独保留，工作 XMP 合并作者、版权、关键词等内容。第二盘备份保留来源字节。</p></details>
+          <details><summary>移动拍摄文件夹后，项目进度会丢吗？</summary><p>打开“文件 → 项目…”（⌘⇧P），选择项目并点击“重新定位…”，指向移动后的照片目录。项目记住标记、调整、上次浏览位置和本地分析。项目列表是轻量索引；移除项目记录不会删除照片。</p></details>
+        </section>
+        <section class="content-section" id="denoise-help">
+          <p class="eyebrow">ON-DEVICE AI / NATIVE PIXELS</p><h2>降噪，先处理再对比。</h2>
+          <p>在检查器展开“AI 降噪”，调高强度并等待处理完成，再点“查看对比…”。对比页按原始像素显示所选区域，点击概览图或方向按钮换区域。未启用或正在处理时，对比入口不可用。</p>
+          <details><summary>照片会上传吗？需要额外下载模型吗？</summary><p>安装包已内置模型。AI 降噪、图像解码、选片分析和导出在 Mac 本地运行，不上传照片，也不要求账号。模型处理解码后的图像，速度与效果取决于素材尺寸、噪声和 Mac 性能。</p></details>
+          <details><summary>亮度与颜色、批量处理怎么用？</summary><p>展开“亮度与颜色”，可分别调整两类噪点的处理比例。降低亮度噪点处理可保留更多颗粒感。“批量…”可把降噪设置同步到当前文件夹中已保留的照片，或处理并导出这批照片；导出前请核对范围。</p></details>
+          <details><summary>为什么部分区域提示使用保护处理？</summary><p>模型有时会在极暗、平滑区域产生异常纹理。Siftroom 检查每个处理区域，发现明显异常时改用保守降噪，并在对比页提示。建议以 100% 原始像素检查再应用；这不是专门的天文去噪或 RAW 马赛克域重建工具。</p></details>
         </section>
 
         <section class="content-section" id="faq">
@@ -66,6 +90,8 @@
           <h2>常见问题</h2>
           <details><summary>为什么某个 RAW 只能显示嵌入预览？</summary><p>RAW 支持取决于相机、压缩方式与 macOS 解码器版本。Siftroom 会先尝试系统 RAW 显影，再尝试 LibRaw；仍不支持时保留嵌入预览并明确显示来源，不会把 JPEG 预览冒充完整 RAW。</p></details>
           <details><summary>标记和调整会修改原片吗？</summary><p>不会。评级、标签和调整默认保存在 Siftroom 的本地记录中；启用 XMP 时写入同名 sidecar。像素修改只在导出时生成新文件。</p></details>
+          <details><summary>如何调整水印位置？</summary><p>浏览时可先打开水印设置，导出面板也提供实时预览。直接拖动水印即可自由定位，也可以使用右侧九宫格按钮快速吸附到常用位置；位置、大小和不透明度会被记住。</p></details>
+          <details><summary>如何把照片交给客户挑选？</summary><p>在导出面板点击“导出客户选片包”。把生成的“客户选片.pdf”发给客户；客户打开 PDF 勾选、保存后发回。回到 Siftroom 后选择“文件 → 导入客户选片…”，软件会自动标记对应原片。</p></details>
           <details><summary>Finder 里“在 Siftroom 中打开”没有出现怎么办？</summary><p>先将 Siftroom 放在“应用程序”目录并启动一次，然后前往系统设置 → 键盘 → 键盘快捷键 → 服务 → 文件和文件夹，勾选“在 Siftroom 中打开”。</p></details>
           <details><summary>为什么胶片条滑不动？</summary><p>只有内容超出胶片条宽度时才存在滚动距离。将鼠标放在胶片条上，可使用触控板左右或上下双指滑动；折叠组全部适配一屏时不会产生位移。</p></details>
           <details><summary>删除的照片还能恢复吗？</summary><p>Delete 会把照片移动到 macOS 废纸篓。立即按 ⌘Z 可撤销；也可以在废纸篓中手动放回，Siftroom 会监测目录变化并刷新。</p></details>
@@ -79,16 +105,7 @@
           <p class="eyebrow">04 / CONTACT</p>
           <h2>提交支持请求</h2>
           <p>请不要上传原片或包含敏感信息的文件。描述你的 macOS 版本、相机型号、文件格式和复现步骤即可。</p>
-          <form class="support-form" data-support-form>
-            <div class="field"><label for="name">称呼（可选）</label><input id="name" name="name" autocomplete="name" maxlength="100"></div>
-            <div class="field"><label for="email">联系邮箱</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
-            <div class="field"><label for="subject">问题主题</label><input id="subject" name="subject" maxlength="160" required></div>
-            <div class="field"><label for="message">问题描述</label><textarea id="message" name="message" minlength="20" maxlength="4000" required></textarea></div>
-            <div class="form-honeypot" aria-hidden="true"><label for="company">Company</label><input id="company" name="company" tabindex="-1" autocomplete="off"></div>
-            <label><input type="checkbox" name="consent" value="yes" required> 我同意 Siftroom 为处理本次请求保存上述信息，并通过支持邮箱接收工单通知，最长 90 天。</label>
-            <button class="button button-primary" type="submit">提交请求</button>
-            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-          </form>
+          <div class="support-form"><p>此镜像站不保存支持表单。请使用公开 GitHub 支持工单；不要提交邮箱、原片或其他敏感信息。</p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">打开 Siftroom 支持工单</a></div>
           <p>如果在线表单暂时不可用，也可以前往
             <a class="text-link" href="https://github.com/Glenffi/Glenffi.github.io/issues/new" rel="external">Siftroom 公开支持工单</a>。
             请勿在公开工单中填写邮箱、原片或其他敏感信息。

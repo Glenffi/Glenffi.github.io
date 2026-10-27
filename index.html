@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Siftroom — 轻量选片工具</title>
-  <meta name="description" content="Siftroom 是为 Mac 打造的轻量 RAW 选片与显影工具：快速浏览、智能分组、同步比较、本地滤镜与摄影级非破坏调整。">
+  <meta name="description" content="Siftroom 为 Mac 带来从记忆卡到交付的轻量摄影工作流：校验导入、第二盘备份、项目工作区、本地 AI 降噪、RAW 选片与水印导出。">
   <meta name="theme-color" content="#080806">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:title" content="Siftroom — 打开，就只剩照片">
-  <meta property="og:description" content="原生 Mac 选片、摄影显影、本地滤镜、同步比较与批量导出。照片和分析始终留在本机。">
+  <meta property="og:description" content="从记忆卡导入与校验，到项目选片、本地 AI 降噪和交付。无需账号，不上传照片。">
   <meta property="og:url" content="https://siftroom.com/">
   <meta property="og:image" content="https://siftroom.com/assets/og-image.jpg">
   <link rel="canonical" href="https://siftroom.com/">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icon-192.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/assets/site.css?v=20260902">
-  <script src="/assets/site.js?v=20260902" defer></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20261027">
+  <script src="/assets/site.js?v=20261027" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -30,10 +30,10 @@
       <span></span><span></span><span></span><span class="sr-only">打开导航</span>
     </button>
     <nav class="site-nav" id="site-nav" data-menu>
+      <a href="#import">导入</a>
       <a href="#workflow">选片</a>
-      <a href="#develop">显影</a>
-      <a href="#filters">滤镜</a>
-      <a href="#compare">比较</a>
+      <a href="#denoise">降噪</a>
+      <a href="#delivery">交付</a>
       <a href="#local">隐私</a>
       <a href="/support/">支持</a>
       <a class="nav-cta" href="https://apps.apple.com/cn/app/id6804907962" target="_blank" rel="noopener" aria-label="前往 App Store 下载 Siftroom">App Store 下载</a>
@@ -46,17 +46,17 @@
       <div class="hero-scrim"></div>
       <div class="hero-grid"></div>
       <div class="hero-content">
-        <p class="eyebrow" data-reveal>PHOTO CULLING / PHOTOGRAPHIC PROCESS / MAC NATIVE</p>
+        <p class="eyebrow" data-reveal>FROM MEMORY CARD TO SELECTS / MAC NATIVE</p>
         <h1 id="hero-title" data-reveal><span>打开，</span><strong>就只剩照片。</strong></h1>
-        <p class="hero-copy" data-reveal>不导入图库，不上传原片。打开一个文件夹，直接完成浏览、分组、比较、摄影显影与交付。</p>
+        <p class="hero-copy" data-reveal>从记忆卡到工作盘，从初选到交付。校验导入、项目选片与本地 AI 降噪，在一张轻盈的光台上完成。也可以直接打开文件夹，立刻开始。</p>
         <div class="hero-actions" data-reveal>
-          <a class="button button-primary" href="#develop">看看新的显影引擎 <span aria-hidden="true">↓</span></a>
+          <a class="button button-primary" href="#import">看看完整工作流 <span aria-hidden="true">↓</span></a>
           <a class="button button-ghost" href="https://apps.apple.com/cn/app/id6804907962" target="_blank" rel="noopener">App Store 下载 <span aria-hidden="true">↗</span></a>
         </div>
         <dl class="hero-facts" data-reveal>
-          <div><dt>01</dt><dd>RAW 即时审阅</dd></div>
-          <div><dt>02</dt><dd>摄影显影引擎</dd></div>
-          <div><dt>03</dt><dd>滤镜与 Vision 全本地</dd></div>
+          <div><dt>01</dt><dd>导入与读回校验</dd></div>
+          <div><dt>02</dt><dd>项目与 RAW 选片</dd></div>
+          <div><dt>03</dt><dd>AI 降噪在本机完成</dd></div>
         </dl>
       </div>
       <div class="hero-badge" aria-hidden="true"><i></i><span>LIGHT TABLE / READY</span></div>
@@ -69,16 +69,35 @@
         <p class="eyebrow">A WORKSPACE THAT DISAPPEARS</p>
         <h2>界面退后一步，<br><em>判断向前一步。</em></h2>
       </div>
-      <p class="manifest-note" data-reveal>Siftroom 不是缩小版图库，也不要求先建立目录。它把选片、焦点判断和轻量显影留在同一张光台上，然后在不需要时安静退场。</p>
+      <p class="manifest-note" data-reveal>一次拍摄，可以有清楚的来路和去处。导入时留下校验记录，项目里接着上次的进度；浏览、比较、降噪与交付仍围绕照片展开。无需建立全局图库，也不强制改变你的文件夹习惯。</p>
+    </section>
+
+    <section class="ingest section-shell" id="import" aria-labelledby="import-title">
+      <div class="section-heading" data-reveal>
+        <div><p class="eyebrow">01 / A VERIFIED START</p><h2 id="import-title">带回照片，<br><em>也带回一份安心。</em></h2></div>
+        <p>先浏览记忆卡或文件夹里的照片，再选择工作盘。每个文件复制后都读回校验；需要第二份备份时，选择另一个卷，副本也独立检查。来源照片保持原样。</p>
+      </div>
+      <figure class="product-frame" data-reveal>
+        <img src="/assets/import-v110.webp" alt="Siftroom 导入中心实机界面：来源照片缩略图、项目、备份和命名预览" width="1880" height="1200" loading="lazy">
+      </figure>
+      <div class="feature-rail" data-reveal>
+        <article><span class="rail-index">01 / VERIFY</span><b>复制之后，再读一次</b><p>逐文件 SHA-256 校验，可保存校验报告。第二份备份建议使用另一块物理磁盘。</p></article>
+        <article><span class="rail-index">02 / RESUME</span><b>中断，也接得回来</b><p>暂停或退出后从导入记录继续。已校验的工作副本可以先开始选片。</p></article>
+        <article><span class="rail-index">03 / ORGANIZE</span><b>一次拍摄，同一套规则</b><p>RAW、JPEG 与 XMP 成组命名；元数据模板保存作者、版权与关键词，支持跳过相同内容。</p></article>
+      </div>
+      <div class="project-story" data-reveal>
+        <div class="project-copy"><p class="eyebrow">02 / A PLACE FOR EACH SHOOT</p><h3>下次打开，<br>接着这次的判断。</h3><p>每次拍摄一个项目。标记、调整、分析和上次浏览位置一起记住。文件夹移动后重新定位，项目继续；想直接打开文件夹，也始终可以。</p><a class="text-link" href="/support/#import-help">了解导入与项目 <span aria-hidden="true">↗</span></a></div>
+        <figure class="product-frame"><img src="/assets/projects-v110.webp" alt="Siftroom 项目工作区实机画面，展示照片、保留数量和本地分析进度" width="1560" height="1040" loading="lazy"></figure>
+      </div>
     </section>
 
     <section class="workflow section-shell" id="workflow" aria-labelledby="workflow-title">
       <div class="section-heading" data-reveal>
-        <div><p class="eyebrow">01 / KEYBOARD-FIRST</p><h2 id="workflow-title">决定从不打断浏览</h2></div>
+        <div><p class="eyebrow">03 / KEYBOARD-FIRST</p><h2 id="workflow-title">决定从不打断浏览</h2></div>
         <p>方向键持续前进。P 保留、X 拒绝，再按一次取消；U 清除旗标。Command 与 Shift 多选后，评级、标签和调整统一作用于整组照片。</p>
       </div>
       <figure class="product-frame" data-reveal>
-        <img src="/assets/workflow.webp" alt="Siftroom 键盘选片界面，展示标记反馈和胶片条">
+        <img src="/assets/workspace-v110.webp" alt="Siftroom 键盘选片界面，展示标记反馈和胶片条">
         <figcaption><span>← →</span><span>P / X / U</span><span>0–5</span><span>⌘Z</span></figcaption>
       </figure>
       <div class="feature-rail" data-reveal>
@@ -90,12 +109,12 @@
 
     <section class="develop section-shell" id="develop" aria-labelledby="develop-title">
       <div class="section-heading" data-reveal>
-        <div><p class="eyebrow">02 / PHOTOGRAPHIC PROCESS 01</p><h2 id="develop-title">不是加深颜色，<br><em>是重新组织光。</em></h2></div>
+        <div><p class="eyebrow">04 / PHOTOGRAPHIC PROCESS</p><h2 id="develop-title">不是加深颜色，<br><em>是重新组织光。</em></h2></div>
         <p>对比度围绕照片自己的中灰轴展开，高光、阴影、白色与黑色各自作用于不同亮度区域；色彩变化保护明度与肤色，让批量统一也保留照片原本的层次。</p>
       </div>
       <div class="develop-grid">
         <figure class="product-frame inspector-frame" data-reveal>
-          <img src="/assets/inspector.webp" alt="Siftroom 检查器展示直方图、EXIF 与摄影显影调整">
+          <img src="/assets/inspector-v110.webp" alt="Siftroom 检查器展示直方图、EXIF 与摄影显影调整">
         </figure>
         <aside class="tone-console" data-reveal aria-label="Siftroom 摄影显影引擎示意">
           <header><span>PROCESS / 01</span><b>PERCEPTUAL TONE</b><i>LIVE</i></header>
@@ -117,10 +136,19 @@
       </div>
     </section>
 
+    <section class="denoise section-shell" id="denoise" aria-labelledby="denoise-title">
+      <div class="section-heading" data-reveal>
+        <div><p class="eyebrow">05 / ON-DEVICE AI DENOISE</p><h2 id="denoise-title">少一些噪点，<br><em>判断留给你。</em></h2></div>
+        <p>模型随 App 内置，照片在这台 Mac 上处理。先启用降噪，再放大到原始像素检查细节；调整强度、亮度与颜色噪点，找到你愿意留下的质感。</p>
+      </div>
+      <figure class="product-frame denoise-frame" data-reveal><img src="/assets/denoise-v110.webp" alt="Siftroom 本地 AI 降噪实机对比：原始像素细节、强度与亮度颜色控制" width="1440" height="1462" loading="lazy"></figure>
+      <div class="denoise-details" data-reveal><p>设置满意后，可批量同步给已保留照片，或直接处理并导出。</p><p>效果因素材和噪声而异。以 100% 细节对比，决定适合这张照片的强度。</p></div>
+    </section>
+
     <section class="filter-lab" id="filters" aria-labelledby="filters-title">
       <div class="filter-lab-inner section-shell">
         <div class="filter-copy" data-reveal>
-          <p class="eyebrow">03 / LOCAL FILTER LAB</p>
+          <p class="eyebrow">06 / LOCAL FILTER LAB</p>
           <h2 id="filters-title">你的风格，<br><em>也是一个文件。</em></h2>
           <p>导入 <code>.siftfilterpack</code> 即可使用一组 RGB 与蒙板滤镜。所有滤镜都只包含声明式参数，不执行第三方代码；你也可以在滤镜工坊中制作、导出，再通过任何社区分享。</p>
           <ul class="line-list">
@@ -138,7 +166,7 @@
 
     <section class="compare section-shell" id="compare" aria-labelledby="compare-title">
       <div class="compare-copy" data-reveal>
-        <p class="eyebrow">04 / COMPARE MODE</p>
+        <p class="eyebrow">07 / COMPARE MODE</p>
         <h2 id="compare-title">哪张更锐？<br><em>放在一起看。</em></h2>
         <p>按 C 进入无干扰双图比较。两张照片共享缩放与平移，快速定位到人脸或眼部；连拍优选不再依赖来回切换的短暂记忆。</p>
         <ul class="line-list">
@@ -148,7 +176,7 @@
         </ul>
       </div>
       <figure class="compare-visual" data-reveal>
-        <img src="/assets/compare.webp" alt="Siftroom 双图比较模式，两张照片并排展示">
+        <img src="/assets/compare-v110.webp" alt="Siftroom 双图比较模式，两张照片并排展示">
         <figcaption><i></i>VIEWPORTS / LINKED</figcaption>
       </figure>
     </section>
@@ -158,9 +186,9 @@
       <div class="local-inner section-shell">
         <p class="local-word" aria-hidden="true">LOCAL</p>
         <div class="local-copy" data-reveal>
-          <p class="eyebrow">05 / PRIVATE INTELLIGENCE</p>
+          <p class="eyebrow">08 / PRIVATE INTELLIGENCE</p>
           <h2 id="local-title">机器帮你折叠，<br><em>照片不离开 Mac。</em></h2>
-          <p>Vision 在设备本地计算相似特征、连拍关系、人脸与眼部位置，并为组内照片给出可读的清晰度排序。500 张照片可以折叠成更少的判断单元，但原片从不上传。</p>
+          <p>Vision 在设备本地计算相似特征、连拍关系、人脸与眼部位置，并为组内照片给出可读的清晰度排序。相似照片折叠成更少的判断单元，分析结果可随项目复用，原片始终不上传。</p>
           <a class="text-link" href="/privacy/">阅读隐私政策 <span aria-hidden="true">↗</span></a>
         </div>
         <div class="local-metrics" data-reveal>
@@ -171,20 +199,22 @@
       </div>
     </section>
 
-    <section class="delivery section-shell" aria-labelledby="delivery-title">
+    <section class="delivery section-shell" id="delivery" aria-labelledby="delivery-title">
       <div class="delivery-copy" data-reveal>
-        <p class="eyebrow">06 / RULE-BASED DELIVERY</p>
+        <p class="eyebrow">09 / RULE-BASED DELIVERY</p>
         <h2 id="delivery-title">选完，<br><em>按你的规则交付。</em></h2>
-        <p>批量导出 JPEG，设置质量、最长边与色彩空间。基础名称加数字序列，导出前逐字预览最终文件名。需要署名时，按 ⌘⇧W 一键叠加水印再导出。</p>
+        <p>批量导出 JPEG，设置质量、最长边与色彩空间。基础名称加数字序列，导出前逐字预览最终文件名。需要署名时，按 ⌘⇧W 一键叠加水印再导出；需要客户挑片时，导出一份可勾选的 PDF 选片包，客户保存发回后可自动导入选择。</p>
         <div class="filename-sequence" aria-label="命名示例"><span>旅拍精选_</span><b>0001</b><i>.jpg</i></div>
         <ul class="line-list">
           <li>内置 siftroom 签名水印，也可换成自己的图片</li>
-          <li>九宫格位置、缩放与不透明度随导出预设保存</li>
-          <li>水印随 ⌘⇧W 一次完成，不改动原始照片</li>
+          <li>实时预览，水印可自由拖动，也可用九宫格快速定位</li>
+          <li>水印颜色可切换，设置会记住；⌘⇧W 快速导出</li>
+          <li>按地点名称搜索或地图选点，将 GPS 写入导出副本</li>
+          <li>客户选片包使用原生 PDF，不需要网页、账号或技术文件</li>
         </ul>
       </div>
       <figure class="delivery-visual" data-reveal>
-        <img src="/assets/export.webp" alt="Siftroom 批量导出界面展示自定义命名和文件名预览">
+        <img src="/assets/export-v110.webp" alt="Siftroom 实机水印设置，展示实时预览、颜色与位置调整">
       </figure>
     </section>
 
@@ -193,7 +223,7 @@
       <img src="/assets/app-icon.png" alt="Siftroom App 图标" width="160" height="160" data-reveal>
       <p class="eyebrow" data-reveal>SIFTROOM FOR MAC</p>
       <h2 data-reveal>把时间留给照片，<br>不是等待。</h2>
-      <p data-reveal>支持 RAW、JPEG、PNG、HEIF 与 TIFF。原生运行于 macOS 14 或更高版本。</p>
+      <p data-reveal>支持 RAW、JPEG、PNG、HEIF 与 TIFF 照片。适用于 Apple 芯片 Mac，macOS 14 或更高版本。</p>
       <div class="hero-actions" data-reveal>
         <a class="button button-primary" href="https://apps.apple.com/cn/app/id6804907962" target="_blank" rel="noopener">App Store 下载 <span aria-hidden="true">↗</span></a>
         <a class="button button-ghost" href="/support/">查看支持文档</a>
