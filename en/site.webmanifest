@@ -1,0 +1,17 @@
+{
+  "name": "Siftroom — Photo Culling",
+  "short_name": "Siftroom",
+  "start_url": "/en/",
+  "display": "standalone",
+  "background_color": "#080806",
+  "theme_color": "#080806",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en",
+  "scope": "/en/"
+}
