@@ -9,8 +9,8 @@
 <meta content="#080806" name="theme-color"/>
 <link href="https://siftroom.com/en/support/" rel="canonical"/>
 <link href="/assets/favicon.png" rel="icon" type="image/png"/>
-<link href="/assets/site.css?v=20261028" rel="stylesheet"/>
-<script defer="" src="/assets/site.js?v=20261028"></script>
+<link href="/assets/site.css?v=20261104" rel="stylesheet"/>
+<script defer="" src="/assets/site.js?v=20261104"></script>
 <link href="https://siftroom.com/support/" hreflang="zh-Hans" rel="alternate"/><link href="https://siftroom.com/en/support/" hreflang="en" rel="alternate"/><link href="https://siftroom.com/support/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -25,7 +25,7 @@
 <p>Start with the guides, shortcuts and FAQs. Use the public support tracker if you need more help.</p>
 </header>
 <div class="support-layout">
-<nav aria-label="On this page" class="toc"><a href="#start">Getting started</a><a href="#shortcuts">Shortcuts</a><a href="#import-help">Imports and projects</a><a href="#denoise-help">AI Denoise</a><a href="#faq">FAQ</a><a href="#contact">Contact support</a></nav>
+<nav aria-label="On this page" class="toc"><a href="#start">Getting started</a><a href="#shortcuts">Shortcuts</a><a href="#import-help">Imports and projects</a><a href="#denoise-help">AI Denoise</a><a href="#faq">FAQ</a><a href="#contact">Contact support</a><a href="#pro-help">Pro &amp; Advanced Workflows</a></nav>
 <div class="content-stack">
 <section class="content-section" id="start">
 <p class="eyebrow">01 / START</p>
@@ -80,7 +80,7 @@
 <details><summary>How do luminance, color and batch controls work?</summary><p>Expand Luminance and Color to control how much of each type of noise is processed. Reduce luminance processing to retain more grain. Batch… can copy denoise settings to picked photos in the current folder, or process and export that set. Check the scope before exporting.</p></details>
 <details><summary>Why do some regions use protective processing?</summary><p>The model may create unusual texture in very dark, smooth regions. Siftroom checks output and uses conservative denoising for clearly abnormal regions, with a notice in Compare. Inspect at native pixels before applying. This is not a specialized astrophotography denoiser or RAW mosaic reconstruction tool.</p></details>
 </section>
-<section class="content-section" id="faq">
+<section class="content-section" id="pro-help"><p class="eyebrow">LOCAL STUDIO / PRO</p><h2>Pro &amp; Advanced Workflows</h2><details><summary>What is free, and what needs Pro?</summary><p>Browsing, manual culling, import, projects, local AI denoising and export remain free. No Siftroom account required. Intelligent Culling, reference color matching, smart masks, advanced HSL/color grading and Star Stacking require a one-time Pro purchase. No subscription.</p></details><details><summary>How do I buy or restore Pro?</summary><p>Open Siftroom → Siftroom Pro…. The App Store handles the purchase; no Siftroom account is needed. After reinstalling or moving to another Mac, sign into the App Store with the Apple Account used to buy Pro, then choose Restore Purchases. The purchase page shows your current storefront price.</p></details><details><summary>Does Intelligent Culling delete photos for me?</summary><p>No. Open Studio → Intelligent Culling… (⌘⌥A), analyze the photos and compare group-relative sharpness, exposure and face details. Split or merge groups and keep more than one frame. Confirmation marks only your checked photos. Eye hints are not definitive blink detection.</p></details><details><summary>How do the workshops work?</summary><p>Open Studio → Smart Workshop… to match reference colors or generate subject, people and background masks as editable layers. Use ⌘Z to undo and ⇧⌘Z to redo. Filter Workshop accepts your own RAW/JPEG test photos, multi-photo previews, HSL and three-way grading. Generated smart masks apply to the current photo; inspect their edges.</p></details><details><summary>What photos should I use for Star Stacking?</summary><p>Use at least two frames from the same sequence that pass assessment and alignment. For fixed-tripod shots, enable foreground protection, inspect the red area and refine it with the brush or an imported mask. Create a new 16-bit TIFF while preserving originals. Failed frames are excluded with a reason. This is not deep-sky calibration, star trails, HDR or focus stacking.</p></details><details><summary>Where are versions, delivery profiles and tasks?</summary><p>Use the Studio menu for Photo Versions, Delivery Profiles or Background Tasks (⌘⌥J). Versions retain different edits and crops; profiles reuse export settings. Task Center shows progress and history. Imports can resume; interrupted star stacks need to restart.</p></details><details><summary>Do language changes require a restart?</summary><p>No, starting in 2.0. Choose English, Simplified Chinese or Follow System under Settings → General → App Language. Open views update immediately. Your own saved project, template and filter names are not translated.</p></details></section><section class="content-section" id="faq">
 <p class="eyebrow">03 / FAQ</p>
 <h2>FAQ</h2>
 <details><summary>Why does a RAW file show only its embedded preview?</summary><p>Support depends on the camera, compression and macOS decoder version. Siftroom tries the system RAW engine, then LibRaw. If neither supports the file, it keeps the embedded preview and identifies its source rather than presenting it as a full RAW rendering.</p></details>
@@ -100,9 +100,7 @@
 <h2>Send a support request</h2>
 <p>Do not upload original photos or sensitive files. Include your macOS version, camera model, file format and the steps to reproduce the issue.</p>
 <div class="support-form"><p>This mirror does not store support forms. Use the public GitHub tracker without including email addresses, original photos or sensitive information.</p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">Open a support issue</a></div>
-<p>If the form is unavailable, use the
-            <a class="text-link" href="https://github.com/Glenffi/Glenffi.github.io/issues/new" rel="external">Siftroom public support tracker</a>. Do not include email addresses, originals or sensitive information in public issues.
-          </p>
+
 </section>
 </div>
 </div>

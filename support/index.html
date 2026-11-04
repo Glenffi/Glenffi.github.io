@@ -9,8 +9,8 @@
 <meta content="#080806" name="theme-color"/>
 <link href="https://siftroom.com/support/" rel="canonical"/>
 <link href="/assets/favicon.png" rel="icon" type="image/png"/>
-<link href="/assets/site.css?v=20261028" rel="stylesheet"/>
-<script defer="" src="/assets/site.js?v=20261028"></script>
+<link href="/assets/site.css?v=20261104" rel="stylesheet"/>
+<script defer="" src="/assets/site.js?v=20261104"></script>
 <link href="https://siftroom.com/support/" hreflang="zh-Hans" rel="alternate"/><link href="https://siftroom.com/en/support/" hreflang="en" rel="alternate"/><link href="https://siftroom.com/support/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <a class="skip-link" href="#main">跳到正文</a>
@@ -25,7 +25,7 @@
 <p>先查看使用说明、快捷键和常见问题；如仍需帮助，可前往公开支持工单。</p>
 </header>
 <div class="support-layout">
-<nav aria-label="本页目录" class="toc"><a href="#start">快速开始</a><a href="#shortcuts">快捷键</a><a href="#import-help">导入与项目</a><a href="#denoise-help">AI 降噪</a><a href="#faq">常见问题</a><a href="#contact">联系支持</a></nav>
+<nav aria-label="本页目录" class="toc"><a href="#start">快速开始</a><a href="#shortcuts">快捷键</a><a href="#import-help">导入与项目</a><a href="#denoise-help">AI 降噪</a><a href="#faq">常见问题</a><a href="#contact">联系支持</a><a href="#pro-help">Pro 与进阶工作流</a></nav>
 <div class="content-stack">
 <section class="content-section" id="start">
 <p class="eyebrow">01 / START</p>
@@ -80,7 +80,7 @@
 <details><summary>亮度与颜色、批量处理怎么用？</summary><p>展开“亮度与颜色”，可分别调整两类噪点的处理比例。降低亮度噪点处理可保留更多颗粒感。“批量…”可把降噪设置同步到当前文件夹中已保留的照片，或处理并导出这批照片；导出前请核对范围。</p></details>
 <details><summary>为什么部分区域提示使用保护处理？</summary><p>模型有时会在极暗、平滑区域产生异常纹理。Siftroom 检查每个处理区域，发现明显异常时改用保守降噪，并在对比页提示。建议以 100% 原始像素检查再应用；这不是专门的天文去噪或 RAW 马赛克域重建工具。</p></details>
 </section>
-<section class="content-section" id="faq">
+<section class="content-section" id="pro-help"><p class="eyebrow">LOCAL STUDIO / PRO</p><h2>Pro 与进阶工作流</h2><details><summary>哪些功能免费，哪些需要 Pro？</summary><p>照片浏览、手动选片、导入、项目、本地 AI 降噪和导出继续免费，无需注册 Siftroom 账号。 智能选片、参考图配色、智能蒙版、进阶 HSL／色彩分级与星空堆栈需要 Pro，一次购买，无需订阅。</p></details><details><summary>如何购买或恢复 Pro？</summary><p>在 Siftroom 菜单中打开“Siftroom Pro…”。购买由 App Store 处理，不需要创建 Siftroom 账号。重新安装或更换 Mac 后，使用购买时的 Apple 账户登录 App Store，再点击“恢复购买”。价格以购买页面显示为准。</p></details><details><summary>智能选片会替我删除照片吗？</summary><p>不会。从“工作台 → 智能选片…”（⌘⌥A）开始分析，比较组内清晰度、曝光和人脸细节。可拆分或合并分组、保留多张；确认只标记你勾选的照片，不会自动删除原片，也不会把眼部提示当作确定的闭眼结论。</p></details><details><summary>智能工坊和滤镜工坊如何使用？</summary><p>从“工作台 → 智能工坊…”匹配参考图配色，或生成主体、人物与背景蒙版，应用为可继续编辑的独立图层。⌘Z 撤销，⇧⌘Z 重做。滤镜工坊支持选择自己的 RAW／JPEG 测试图、多图预览、HSL 和三向色彩分级。生成的智能蒙版作用于当前照片，请检查边缘。</p></details><details><summary>星空堆栈需要什么照片？</summary><p>选择同一拍摄序列中至少两张通过评估和对齐的照片。固定三脚架拍摄时可启用地景保护，检查红色区域并用画笔或导入蒙版修正。生成新的 16 位 TIFF，保留原片。对齐失败的照片会排除并说明原因；此功能不是深空校准、星轨、HDR 或景深合成工具。</p></details><details><summary>版本、交付方案和任务在哪里？</summary><p>在“工作台”菜单打开照片版本、交付方案或后台任务（⌘⌥J）。版本保存不同的调整与裁切；交付方案复用导出设置。任务中心显示进度与历史。导入可继续未完成任务，星空任务中断后需要重新开始。</p></details><details><summary>切换语言还需要重新启动吗？</summary><p>2.0 起无需重新启动。在“设置 → 通用 → 界面语言”选择英语、简体中文或跟随系统，已打开的界面会立即更新。你自己输入或已保存的项目、模板与滤镜名称不会被翻译。</p></details></section><section class="content-section" id="faq">
 <p class="eyebrow">03 / FAQ</p>
 <h2>常见问题</h2>
 <details><summary>为什么某个 RAW 只能显示嵌入预览？</summary><p>RAW 支持取决于相机、压缩方式与 macOS 解码器版本。Siftroom 会先尝试系统 RAW 显影，再尝试 LibRaw；仍不支持时保留嵌入预览并明确显示来源，不会把 JPEG 预览冒充完整 RAW。</p></details>
@@ -100,10 +100,7 @@
 <h2>提交支持请求</h2>
 <p>请不要上传原片或包含敏感信息的文件。描述你的 macOS 版本、相机型号、文件格式和复现步骤即可。</p>
 <div class="support-form"><p>此镜像站不保存支持表单。请使用公开 GitHub 支持工单，不要提交邮箱、原片或其他敏感信息。</p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">打开支持工单</a></div>
-<p>如果在线表单暂时不可用，也可以前往
-            <a class="text-link" href="https://github.com/Glenffi/Glenffi.github.io/issues/new" rel="external">Siftroom 公开支持工单</a>。
-            请勿在公开工单中填写邮箱、原片或其他敏感信息。
-          </p>
+
 </section>
 </div>
 </div>
