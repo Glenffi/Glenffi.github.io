@@ -9,8 +9,8 @@
 <meta content="#080806" name="theme-color"/>
 <link href="https://siftroom.com/en/support/" rel="canonical"/>
 <link href="/assets/favicon.png" rel="icon" type="image/png"/>
-<link href="/assets/site.css?v=20261104" rel="stylesheet"/>
-<script defer="" src="/assets/site.js?v=20261104"></script>
+<link href="/assets/site.css?v=20261107-211" rel="stylesheet"/>
+<script defer="" src="/assets/site.js?v=20261107-211"></script>
 <link href="https://siftroom.com/support/" hreflang="zh-Hans" rel="alternate"/><link href="https://siftroom.com/en/support/" hreflang="en" rel="alternate"/><link href="https://siftroom.com/support/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -22,20 +22,20 @@
 <header class="page-hero">
 <p class="eyebrow">SUPPORT / WITHOUT THE RUNAROUND</p>
 <h1>Keep the question here.<br/><em>Keep your workflow moving.</em></h1>
-<p>Start with the guides, shortcuts and FAQs. Use the public support tracker if you need more help.</p>
+<p>Start with the guides, shortcuts and FAQs. If you still need help, send a support request. No registration required.</p>
 </header>
 <div class="support-layout">
-<nav aria-label="On this page" class="toc"><a href="#start">Getting started</a><a href="#shortcuts">Shortcuts</a><a href="#import-help">Imports and projects</a><a href="#denoise-help">AI Denoise</a><a href="#faq">FAQ</a><a href="#contact">Contact support</a><a href="#pro-help">Pro &amp; Advanced Workflows</a></nav>
+<nav aria-label="On this page" class="toc"><a href="#start">Getting started</a><a href="#shortcuts">Shortcuts</a><a href="#import-help">Imports and projects</a><a href="#denoise-help">AI Denoise</a><a href="#faq">FAQ</a><a href="#contact">Contact support</a><a href="#pro-help">Pro &amp; Advanced Workflows</a><a href="#sample-filter-help">Reference filters</a><a href="#star-trails-help">Trails and stacking</a></nav>
 <div class="content-stack">
 <section class="content-section" id="start">
 <p class="eyebrow">01 / START</p>
 <h2>Getting started</h2>
 <div class="support-cards">
-<article class="support-card"><b>Open your photos</b><p>Drag photos or a folder into Siftroom, or press ⌘O. Enable the optional Finder Service in System Settings.</p></article>
+<article class="support-card"><b>Find the controls</b><p>Reveal controls near the canvas edges, or press ⌘/ to keep them visible. Culling, color and compositing stay in the workspace; press ⌘0 to return to photos.</p></article><article class="support-card"><b>Open your photos</b><p>Drag photos or a folder into Siftroom, or press ⌘O. Enable the optional Finder Service in System Settings.</p></article>
 <article class="support-card"><b>Start culling</b><p>Browse with Left/Right Arrow. P picks, X rejects; press the same key again to clear. U always clears the flag.</p></article>
 <article class="support-card"><b>Compare detail</b><p>Select two photos and press C. Pinch to zoom and pan with two fingers; both photos stay in sync.</p></article>
 <article class="support-card"><b>Batch delivery</b><p>Adjust a selection or apply a preset together, then export with a base name and padded sequence.</p></article>
-<article class="support-card"><b>Add a watermark</b><p>Preview watermark changes live in Export. Press ⌘⇧W to enable watermark export, then drag the mark or use the quick anchors.</p></article>
+<article class="support-card"><b>Add a watermark</b><p>Press ⌘/ and choose Actions → Watermark &amp; Location to set a watermark and capture location while browsing. Preview again before export, or use ⌘⇧W for watermarked export.</p></article>
 <article class="support-card"><b>Client picks</b><p>Choose Export Client Selection in Export. Clients check the PDF, save and return it; import the returned PDF to flag the matching originals.</p></article>
 <article class="support-card"><b>Use local filters</b><p>Open Window → Filter Library to import a <code>.siftfilterpack</code> file, or create RGB and mask-based filters in the workshop.</p></article>
 <article class="support-card"><b>Lightweight development</b><p>Exposure, tone, white balance, clarity, dehaze, denoising and sharpening are non-destructive.</p></article>
@@ -46,7 +46,7 @@
 <h2>Essential shortcuts</h2>
 <table class="shortcut-table">
 <thead><tr><th>Action</th><th>Keys</th><th>What it does</th></tr></thead>
-<tbody>
+<tbody><tr><td>Controls</td><td><kbd>⌘/</kbd></td><td>Keep controls visible; press again for auto-hide</td></tr><tr><td>Return to photos</td><td><kbd>⌘0</kbd></td><td>Return to the current collection’s browsing view</td></tr>
 <tr><td>Import photos</td><td><kbd>⌘I</kbd></td><td>Open the card and folder Import Center</td></tr>
 <tr><td>Projects</td><td><kbd>⌘⇧P</kbd></td><td>Resume review of a shoot</td></tr>
 <tr><td>Browse</td><td><kbd>←</kbd> <kbd>→</kbd></td><td>Move through the current filtered results</td></tr>
@@ -80,7 +80,154 @@
 <details><summary>How do luminance, color and batch controls work?</summary><p>Expand Luminance and Color to control how much of each type of noise is processed. Reduce luminance processing to retain more grain. Batch… can copy denoise settings to picked photos in the current folder, or process and export that set. Check the scope before exporting.</p></details>
 <details><summary>Why do some regions use protective processing?</summary><p>The model may create unusual texture in very dark, smooth regions. Siftroom checks output and uses conservative denoising for clearly abnormal regions, with a notice in Compare. Inspect at native pixels before applying. This is not a specialized astrophotography denoiser or RAW mosaic reconstruction tool.</p></details>
 </section>
-<section class="content-section" id="pro-help"><p class="eyebrow">LOCAL STUDIO / PRO</p><h2>Pro &amp; Advanced Workflows</h2><details><summary>What is free, and what needs Pro?</summary><p>Browsing, manual culling, import, projects, local AI denoising and export remain free. No Siftroom account required. Intelligent Culling, reference color matching, smart masks, advanced HSL/color grading and Star Stacking require a one-time Pro purchase. No subscription.</p></details><details><summary>How do I buy or restore Pro?</summary><p>Open Siftroom → Siftroom Pro…. The App Store handles the purchase; no Siftroom account is needed. After reinstalling or moving to another Mac, sign into the App Store with the Apple Account used to buy Pro, then choose Restore Purchases. The purchase page shows your current storefront price.</p></details><details><summary>Does Intelligent Culling delete photos for me?</summary><p>No. Open Studio → Intelligent Culling… (⌘⌥A), analyze the photos and compare group-relative sharpness, exposure and face details. Split or merge groups and keep more than one frame. Confirmation marks only your checked photos. Eye hints are not definitive blink detection.</p></details><details><summary>How do the workshops work?</summary><p>Open Studio → Smart Workshop… to match reference colors or generate subject, people and background masks as editable layers. Use ⌘Z to undo and ⇧⌘Z to redo. Filter Workshop accepts your own RAW/JPEG test photos, multi-photo previews, HSL and three-way grading. Generated smart masks apply to the current photo; inspect their edges.</p></details><details><summary>What photos should I use for Star Stacking?</summary><p>Use at least two frames from the same sequence that pass assessment and alignment. For fixed-tripod shots, enable foreground protection, inspect the red area and refine it with the brush or an imported mask. Create a new 16-bit TIFF while preserving originals. Failed frames are excluded with a reason. This is not deep-sky calibration, star trails, HDR or focus stacking.</p></details><details><summary>Where are versions, delivery profiles and tasks?</summary><p>Use the Studio menu for Photo Versions, Delivery Profiles or Background Tasks (⌘⌥J). Versions retain different edits and crops; profiles reuse export settings. Task Center shows progress and history. Imports can resume; interrupted star stacks need to restart.</p></details><details><summary>Do language changes require a restart?</summary><p>No, starting in 2.0. Choose English, Simplified Chinese or Follow System under Settings → General → App Language. Open views update immediately. Your own saved project, template and filter names are not translated.</p></details></section><section class="content-section" id="faq">
+<section class="content-section" id="pro-help">
+<p class="eyebrow">
+  LOCAL STUDIO / PRO
+ </p>
+<h2>
+  Pro &amp; Advanced Workflows
+ </h2>
+<details>
+<summary>
+   What is free, and what needs Pro?
+  </summary>
+<p>
+   Browsing, manual culling, import, projects, local AI denoising, basic star trails and export are free. Reference filters have a free preview. A one-time Pro purchase unlocks smart culling, saving and batch-applying reference filters, Smart Workshop, star stacking and star-trail foreground protection. Existing owners do not need to purchase again.
+  </p>
+</details>
+<details>
+<summary>
+   How do I buy or restore Pro?
+  </summary>
+<p>
+   Open Siftroom → Siftroom Pro…. The App Store handles the purchase; no Siftroom account is needed. After reinstalling or moving to another Mac, sign into the App Store with the Apple Account used to buy Pro, then choose Restore Purchases. The purchase page shows your current storefront price.
+  </p>
+</details>
+<details>
+<summary>
+   Does Intelligent Culling delete photos for me?
+  </summary>
+<p>
+   No. Open Studio → Intelligent Culling… (⌘⌥A), analyze the photos and compare group-relative sharpness, exposure and face details. Split or merge groups and keep more than one frame. Confirmation marks only your checked photos. Eye hints are not definitive blink detection.
+  </p>
+</details>
+<details>
+<summary>
+   How do the workshops work?
+  </summary>
+<p>
+   Open Studio → Smart Workshop… to match reference colors or generate subject, people and background masks as editable layers. Use ⌘Z to undo and ⇧⌘Z to redo. Filter Workshop accepts your own RAW/JPEG test photos, multi-photo previews, HSL and three-way grading. Generated smart masks apply to the current photo; inspect their edges.
+  </p>
+</details>
+<details>
+<summary>
+   What photos should I use for Star Stacking?
+  </summary>
+<p>
+   Use at least two frames from the same sequence that pass assessment and alignment. For fixed-tripod shots, enable foreground protection, inspect the red area and refine it with the brush or an imported mask. Create a new 16-bit TIFF while preserving originals. Failed frames are excluded with a reason. This is not deep-sky calibration, star trails, HDR or focus stacking.
+  </p>
+</details>
+<details>
+<summary>
+   Where are versions, delivery profiles and tasks?
+  </summary>
+<p>
+   Use the Studio menu for Photo Versions, Delivery Profiles or Background Tasks (⌘⌥J). Versions retain different edits and crops; profiles reuse export settings. Task Center shows progress and history. Imports can resume; interrupted star stacks need to restart.
+  </p>
+</details>
+<details>
+<summary>
+   Do language changes require a restart?
+  </summary>
+<p>
+   No, starting in 2.0. Choose English, Simplified Chinese or Follow System under Settings → General → App Language. Open views update immediately. Your own saved project, template and filter names are not translated.
+  </p>
+</details>
+<details>
+<summary>
+   Can I turn off Pro suggestions?
+  </summary>
+<p>
+   Yes. Close the suggestion card, or choose Never Suggest Pro Again from its … menu. This permanently disables suggestions on this Mac. Suggestions are not shown while Pro is unlocked.
+  </p>
+</details>
+</section>
+<section class="content-section" id="sample-filter-help">
+<p class="eyebrow">
+  REFERENCE / REUSABLE LOOKS
+ </p>
+<h2>
+  Create your own reference-based filter
+ </h2>
+<p>
+  Open your photo collection, then choose Actions → Sample Filters or Studio → Create Filter from Sample…. Choose a reference and preview it on the current photo or your own test image. The reference and settings stay in place as you switch photos in the filmstrip.
+ </p>
+<details>
+<summary>
+   What is free, and what needs Pro?
+  </summary>
+<p>
+   Choosing a reference, comparing results and adjusting parameters are free. Saving filter packs and batch-applying reference filters require Pro. Reuse saved filters in the library or share them as .siftfilterpack files.
+  </p>
+</details>
+<details>
+<summary>
+   Why does it not look exactly like the reference?
+  </summary>
+<p>
+   Reference filters borrow color statistics and optional tone relationships. They do not copy the scene, lighting, depth of field or people. Adjust strength, then choose tone matching and skin protection based on the preview.
+  </p>
+</details>
+<details>
+<summary>
+   Do I need to choose the reference again for each photo?
+  </summary>
+<p>
+   No. The current reference and settings stay in place while the filmstrip changes the preview photo. Add other photos to the same workspace when needed.
+  </p>
+</details>
+</section>
+<section class="content-section" id="star-trails-help">
+<p class="eyebrow">
+  STAR TRAILS / STAR STACKING
+ </p>
+<h2>
+  Star trails or star stacking?
+ </h2>
+<details>
+<summary>
+   I want the trails stars trace over time
+  </summary>
+<p>
+   Choose Star Trails. Open a fixed-tripod sequence and enter from Actions or Studio. Check the included photos, preview the composite and export a 16-bit TIFF. Basic compositing is free.
+  </p>
+</details>
+<details>
+<summary>
+   I want point-like stars with less noise
+  </summary>
+<p>
+   Choose Pro’s Aligned Star Stacking. At least two photos must pass assessment and alignment. Stars are aligned before the frames are combined; included frames, alignment reasons and diagnostics are available.
+  </p>
+</details>
+<details>
+<summary>
+   How does star-trail foreground protection work?
+  </summary>
+<p>
+   Enable Protect Foreground · Pro and choose a clean foreground frame. Check the protected area, add with the brush or remove with the eraser. Hold Option to erase temporarily; ⌘Z undoes the last stroke. Other photos continue contributing to the sky.
+  </p>
+</details>
+<details>
+<summary>
+   How do I view or edit the exported result?
+  </summary>
+<p>
+   After a star-trail export, the composite appears in the same workspace. Choose Open in Main Window to continue editing the photo. Processing records retain the inputs and output information.
+  </p>
+</details>
+</section>
+<section class="content-section" id="faq">
 <p class="eyebrow">03 / FAQ</p>
 <h2>FAQ</h2>
 <details><summary>Why does a RAW file show only its embedded preview?</summary><p>Support depends on the camera, compression and macOS decoder version. Siftroom tries the system RAW engine, then LibRaw. If neither supports the file, it keeps the embedded preview and identifies its source rather than presenting it as a full RAW rendering.</p></details>
@@ -93,14 +240,13 @@
 <details><summary>How do I import, create or share filters?</summary><p>Open Window → Filter Library to import a local <code>.siftfilterpack</code> file, or create a filter in the workshop. Exported packs are ordinary files you can share through forums, cloud drives or messaging apps. Siftroom has no upload marketplace.</p></details>
 <details><summary>Can filter packs execute third-party code?</summary><p>No. Packs contain only supported declarative RGB, LUT and mask parameters. Size, type and integrity are checked before import. Packs contain no scripts, plug-in binaries or executable models.</p></details>
 <details><summary>Are adjustment values compatible with Adobe Camera Raw?</summary><p>No. Siftroom uses its own processing engine: exposure in EV, region-based tone controls and adaptive midtone contrast. It is designed for quick review and batch consistency, without claiming to reproduce Adobe's proprietary camera profiles or Process Version.</p></details>
-<details><summary>Does Siftroom upload photos or collect usage data?</summary><p>No. Image analysis and processing run locally, without accounts, ads or third-party analytics. The website stores contact details and your question only when you choose to submit a support request.</p></details>
-</section>
+<details><summary>Does Siftroom upload photos or collect usage data?</summary><p>Photos and usage records are not uploaded to our servers. Photo processing stays local, with no Siftroom account or third-party advertising or analytics SDK. Apple services handle place search and address lookup; purchases are handled by the App Store. Support forms retain only what you choose to submit.</p></details>
+<details><summary>Where do I set the capture location?</summary><p>With a photo open, choose Actions → Watermark &amp; Location → Capture Location. Search for a place, choose a map point, or select This Mac to request system location permission. Locations are written to exported copies; the Mac’s current location is not necessarily where the photo was taken.</p></details></section>
 <section class="content-section" id="contact">
 <p class="eyebrow">04 / CONTACT</p>
 <h2>Send a support request</h2>
 <p>Do not upload original photos or sensitive files. Include your macOS version, camera model, file format and the steps to reproduce the issue.</p>
 <div class="support-form"><p>This mirror does not store support forms. Use the public GitHub tracker without including email addresses, original photos or sensitive information.</p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">Open a support issue</a></div>
-
 </section>
 </div>
 </div>

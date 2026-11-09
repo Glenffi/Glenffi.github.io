@@ -9,8 +9,8 @@
 <meta content="#080806" name="theme-color"/>
 <link href="https://siftroom.com/support/" rel="canonical"/>
 <link href="/assets/favicon.png" rel="icon" type="image/png"/>
-<link href="/assets/site.css?v=20261104" rel="stylesheet"/>
-<script defer="" src="/assets/site.js?v=20261104"></script>
+<link href="/assets/site.css?v=20261107-211" rel="stylesheet"/>
+<script defer="" src="/assets/site.js?v=20261107-211"></script>
 <link href="https://siftroom.com/support/" hreflang="zh-Hans" rel="alternate"/><link href="https://siftroom.com/en/support/" hreflang="en" rel="alternate"/><link href="https://siftroom.com/support/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <a class="skip-link" href="#main">跳到正文</a>
@@ -22,20 +22,20 @@
 <header class="page-hero">
 <p class="eyebrow">SUPPORT / WITHOUT THE RUNAROUND</p>
 <h1>让问题停在这里，<br/><em>别停在工作流里。</em></h1>
-<p>先查看使用说明、快捷键和常见问题；如仍需帮助，可前往公开支持工单。</p>
+<p>先从常见问题和快捷键开始；如果仍未解决，提交支持请求。无需注册账号。</p>
 </header>
 <div class="support-layout">
-<nav aria-label="本页目录" class="toc"><a href="#start">快速开始</a><a href="#shortcuts">快捷键</a><a href="#import-help">导入与项目</a><a href="#denoise-help">AI 降噪</a><a href="#faq">常见问题</a><a href="#contact">联系支持</a><a href="#pro-help">Pro 与进阶工作流</a></nav>
+<nav aria-label="本页目录" class="toc"><a href="#start">快速开始</a><a href="#shortcuts">快捷键</a><a href="#import-help">导入与项目</a><a href="#denoise-help">AI 降噪</a><a href="#faq">常见问题</a><a href="#contact">联系支持</a><a href="#pro-help">Pro 与进阶工作流</a><a href="#sample-filter-help">样片滤镜</a><a href="#star-trails-help">星轨与堆栈</a></nav>
 <div class="content-stack">
 <section class="content-section" id="start">
 <p class="eyebrow">01 / START</p>
 <h2>快速开始</h2>
 <div class="support-cards">
-<article class="support-card"><b>打开一组照片</b><p>将文件或文件夹拖进 Siftroom，或使用 ⌘O。Finder 服务可在系统设置中单独启用。</p></article>
+<article class="support-card"><b>找回操作入口</b><p>鼠标靠近画布边缘时唤出操作，或按 ⌘/ 固定显示操作栏。选片、配色与合成都留在当前工作区；按 ⌘0 回到照片。</p></article><article class="support-card"><b>打开一组照片</b><p>将文件或文件夹拖进 Siftroom，或使用 ⌘O。Finder 服务可在系统设置中单独启用。</p></article>
 <article class="support-card"><b>开始选片</b><p>左右方向键浏览，P 保留、X 拒绝，再按同一个键取消。U 始终清除旗标。</p></article>
 <article class="support-card"><b>比较细节</b><p>选择两张照片后按 C。捏合缩放、双指平移，两张照片保持同步。</p></article>
 <article class="support-card"><b>批量交付</b><p>多选照片后统一调整或应用预设，导出时可设置基础名称与数字序列。</p></article>
-<article class="support-card"><b>添加水印</b><p>导出面板会实时预览水印效果。按 ⌘⇧W 开启水印导出，可直接拖动水印或使用九宫格快速定位。</p></article>
+<article class="support-card"><b>添加水印</b><p>按 ⌘/ 唤出操作栏，选择“操作 → 水印与位置”，即可在浏览时调整水印和拍摄地点。导出前可再次预览，⌘⇧W 快速进入水印导出。</p></article>
 <article class="support-card"><b>客户选片</b><p>导出面板选择“导出客户选片包”，客户在 PDF 里勾选并保存发回；摄影师用“导入客户选片”自动标记原片。</p></article>
 <article class="support-card"><b>使用本地滤镜</b><p>从“窗口 → 滤镜库”导入 <code>.siftfilterpack</code>，或在滤镜工坊中创建自己的 RGB 与蒙板滤镜。</p></article>
 <article class="support-card"><b>轻量显影</b><p>检查器中的曝光、分区色调、白平衡、清晰度、去雾、降噪与锐化均为非破坏调整。</p></article>
@@ -46,7 +46,7 @@
 <h2>常用快捷键</h2>
 <table class="shortcut-table">
 <thead><tr><th>操作</th><th>按键</th><th>说明</th></tr></thead>
-<tbody>
+<tbody><tr><td>操作栏</td><td><kbd>⌘/</kbd></td><td>固定显示操作入口，再按恢复自动隐藏</td></tr><tr><td>返回照片</td><td><kbd>⌘0</kbd></td><td>回到当前照片组的浏览视图</td></tr>
 <tr><td>导入照片</td><td><kbd>⌘I</kbd></td><td>打开记忆卡与文件夹导入中心</td></tr>
 <tr><td>项目</td><td><kbd>⌘⇧P</kbd></td><td>继续一次拍摄的选片进度</td></tr>
 <tr><td>前后浏览</td><td><kbd>←</kbd> <kbd>→</kbd></td><td>连续导航当前筛选结果</td></tr>
@@ -80,7 +80,154 @@
 <details><summary>亮度与颜色、批量处理怎么用？</summary><p>展开“亮度与颜色”，可分别调整两类噪点的处理比例。降低亮度噪点处理可保留更多颗粒感。“批量…”可把降噪设置同步到当前文件夹中已保留的照片，或处理并导出这批照片；导出前请核对范围。</p></details>
 <details><summary>为什么部分区域提示使用保护处理？</summary><p>模型有时会在极暗、平滑区域产生异常纹理。Siftroom 检查每个处理区域，发现明显异常时改用保守降噪，并在对比页提示。建议以 100% 原始像素检查再应用；这不是专门的天文去噪或 RAW 马赛克域重建工具。</p></details>
 </section>
-<section class="content-section" id="pro-help"><p class="eyebrow">LOCAL STUDIO / PRO</p><h2>Pro 与进阶工作流</h2><details><summary>哪些功能免费，哪些需要 Pro？</summary><p>照片浏览、手动选片、导入、项目、本地 AI 降噪和导出继续免费，无需注册 Siftroom 账号。 智能选片、参考图配色、智能蒙版、进阶 HSL／色彩分级与星空堆栈需要 Pro，一次购买，无需订阅。</p></details><details><summary>如何购买或恢复 Pro？</summary><p>在 Siftroom 菜单中打开“Siftroom Pro…”。购买由 App Store 处理，不需要创建 Siftroom 账号。重新安装或更换 Mac 后，使用购买时的 Apple 账户登录 App Store，再点击“恢复购买”。价格以购买页面显示为准。</p></details><details><summary>智能选片会替我删除照片吗？</summary><p>不会。从“工作台 → 智能选片…”（⌘⌥A）开始分析，比较组内清晰度、曝光和人脸细节。可拆分或合并分组、保留多张；确认只标记你勾选的照片，不会自动删除原片，也不会把眼部提示当作确定的闭眼结论。</p></details><details><summary>智能工坊和滤镜工坊如何使用？</summary><p>从“工作台 → 智能工坊…”匹配参考图配色，或生成主体、人物与背景蒙版，应用为可继续编辑的独立图层。⌘Z 撤销，⇧⌘Z 重做。滤镜工坊支持选择自己的 RAW／JPEG 测试图、多图预览、HSL 和三向色彩分级。生成的智能蒙版作用于当前照片，请检查边缘。</p></details><details><summary>星空堆栈需要什么照片？</summary><p>选择同一拍摄序列中至少两张通过评估和对齐的照片。固定三脚架拍摄时可启用地景保护，检查红色区域并用画笔或导入蒙版修正。生成新的 16 位 TIFF，保留原片。对齐失败的照片会排除并说明原因；此功能不是深空校准、星轨、HDR 或景深合成工具。</p></details><details><summary>版本、交付方案和任务在哪里？</summary><p>在“工作台”菜单打开照片版本、交付方案或后台任务（⌘⌥J）。版本保存不同的调整与裁切；交付方案复用导出设置。任务中心显示进度与历史。导入可继续未完成任务，星空任务中断后需要重新开始。</p></details><details><summary>切换语言还需要重新启动吗？</summary><p>2.0 起无需重新启动。在“设置 → 通用 → 界面语言”选择英语、简体中文或跟随系统，已打开的界面会立即更新。你自己输入或已保存的项目、模板与滤镜名称不会被翻译。</p></details></section><section class="content-section" id="faq">
+<section class="content-section" id="pro-help">
+<p class="eyebrow">
+  LOCAL STUDIO / PRO
+ </p>
+<h2>
+  Pro 与进阶工作流
+ </h2>
+<details>
+<summary>
+   哪些功能免费，哪些需要 Pro？
+  </summary>
+<p>
+   照片浏览、手动选片、导入、项目、本地 AI 降噪、基础星轨合成和导出免费，样片滤镜可以免费预览。Pro 一次购买解锁智能选片、样片滤镜保存与批量应用、智能工坊、星空堆栈及星轨地景保护。已购买用户无需再次购买。
+  </p>
+</details>
+<details>
+<summary>
+   如何购买或恢复 Pro？
+  </summary>
+<p>
+   在 Siftroom 菜单中打开“Siftroom Pro…”。购买由 App Store 处理，不需要创建 Siftroom 账号。重新安装或更换 Mac 后，使用购买时的 Apple 账户登录 App Store，再点击“恢复购买”。价格以购买页面显示为准。
+  </p>
+</details>
+<details>
+<summary>
+   智能选片会替我删除照片吗？
+  </summary>
+<p>
+   不会。从“工作台 → 智能选片…”（⌘⌥A）开始分析，比较组内清晰度、曝光和人脸细节。可拆分或合并分组、保留多张；确认只标记你勾选的照片，不会自动删除原片，也不会把眼部提示当作确定的闭眼结论。
+  </p>
+</details>
+<details>
+<summary>
+   智能工坊和滤镜工坊如何使用？
+  </summary>
+<p>
+   从“工作台 → 智能工坊…”匹配参考图配色，或生成主体、人物与背景蒙版，应用为可继续编辑的独立图层。⌘Z 撤销，⇧⌘Z 重做。滤镜工坊支持选择自己的 RAW／JPEG 测试图、多图预览、HSL 和三向色彩分级。生成的智能蒙版作用于当前照片，请检查边缘。
+  </p>
+</details>
+<details>
+<summary>
+   星空堆栈需要什么照片？
+  </summary>
+<p>
+   选择同一拍摄序列中至少两张通过评估和对齐的照片。固定三脚架拍摄时可启用地景保护，检查红色区域并用画笔或导入蒙版修正。生成新的 16 位 TIFF，保留原片。对齐失败的照片会排除并说明原因；此功能不是深空校准、星轨、HDR 或景深合成工具。
+  </p>
+</details>
+<details>
+<summary>
+   版本、交付方案和任务在哪里？
+  </summary>
+<p>
+   在“工作台”菜单打开照片版本、交付方案或后台任务（⌘⌥J）。版本保存不同的调整与裁切；交付方案复用导出设置。任务中心显示进度与历史。导入可继续未完成任务，星空任务中断后需要重新开始。
+  </p>
+</details>
+<details>
+<summary>
+   切换语言还需要重新启动吗？
+  </summary>
+<p>
+   2.0 起无需重新启动。在“设置 → 通用 → 界面语言”选择英语、简体中文或跟随系统，已打开的界面会立即更新。你自己输入或已保存的项目、模板与滤镜名称不会被翻译。
+  </p>
+</details>
+<details>
+<summary>
+   能关闭 Pro 功能建议吗？
+  </summary>
+<p>
+   可以。点击建议卡片的关闭按钮，或在“…”中选择“不再建议 Pro”。后者会永久关闭本机建议；已经解锁 Pro 时不会显示。
+  </p>
+</details>
+</section>
+<section class="content-section" id="sample-filter-help">
+<p class="eyebrow">
+  REFERENCE / REUSABLE LOOKS
+ </p>
+<h2>
+  从样片创建自己的滤镜
+ </h2>
+<p>
+  先打开要处理的照片组，再从“操作 → 样片滤镜”或“工作台 → 从样片创建滤镜…”进入。选择一张色调参考图，使用当前照片或自己的测试照片查看效果；在胶片条切换照片时，参考图与参数会保留。
+ </p>
+<details>
+<summary>
+   免费预览和 Pro 保存有什么区别？
+  </summary>
+<p>
+   选择参考图、比较效果和调整参数可以免费使用。保存为滤镜包、批量应用样片滤镜需要 Pro。保存后可在滤镜库中继续使用，也能导出为 .siftfilterpack 文件分享。
+  </p>
+</details>
+<details>
+<summary>
+   为什么不会和样片完全一样？
+  </summary>
+<p>
+   样片滤镜借鉴色彩统计和可选的明暗关系，不会复制场景、光线、景深或人物。先调整强度，再决定是否匹配明暗或保护肤色；不同题材需要结合预览判断。
+  </p>
+</details>
+<details>
+<summary>
+   换一张照片要重新选择样片吗？
+  </summary>
+<p>
+   不需要。当前样片与参数会保留，胶片条用于切换预览照片。需要其他照片时，可把它们加入当前工作区。
+  </p>
+</details>
+</section>
+<section class="content-section" id="star-trails-help">
+<p class="eyebrow">
+  STAR TRAILS / STAR STACKING
+ </p>
+<h2>
+  星轨与星空堆栈，选哪一种？
+ </h2>
+<details>
+<summary>
+   我想保留星星移动的轨迹
+  </summary>
+<p>
+   使用“星轨合成”。先打开固定机位连续拍摄的照片组，再从操作菜单或工作台进入。核对参与照片，预览后导出 16 位 TIFF；基础合成免费。
+  </p>
+</details>
+<details>
+<summary>
+   我想让星点保持为点并降低噪声
+  </summary>
+<p>
+   使用 Pro 的“星点对齐降噪”。需要至少两张通过评估与对齐的照片；程序先对齐星点，再多帧叠加。可查看参与帧、对齐原因与诊断结果。
+  </p>
+</details>
+<details>
+<summary>
+   星轨地景保护怎么用？
+  </summary>
+<p>
+   开启“保护地景 · Pro”，选择干净的地景参考帧，检查保护范围。画笔用于添加保护，橡皮擦用于减少保护；Option 临时擦除，⌘Z 撤销上一笔。其他照片继续参与天空叠加。
+  </p>
+</details>
+<details>
+<summary>
+   导出后如何继续看图或调整？
+  </summary>
+<p>
+   星轨导出完成后，合成视图会直接显示成片。点击“在主窗口打开”回到照片工作区继续调整；处理记录保留参与照片和输出信息。
+  </p>
+</details>
+</section>
+<section class="content-section" id="faq">
 <p class="eyebrow">03 / FAQ</p>
 <h2>常见问题</h2>
 <details><summary>为什么某个 RAW 只能显示嵌入预览？</summary><p>RAW 支持取决于相机、压缩方式与 macOS 解码器版本。Siftroom 会先尝试系统 RAW 显影，再尝试 LibRaw；仍不支持时保留嵌入预览并明确显示来源，不会把 JPEG 预览冒充完整 RAW。</p></details>
@@ -93,14 +240,13 @@
 <details><summary>如何导入、创建或分享滤镜？</summary><p>打开“窗口 → 滤镜库”，可以导入本地 <code>.siftfilterpack</code>，也可以进入滤镜工坊创建滤镜。导出的滤镜包是普通文件，可通过论坛、网盘或聊天工具自行分享；Siftroom 不提供上传市场。</p></details>
 <details><summary>滤镜包会运行第三方代码吗？</summary><p>不会。滤镜包只允许 Siftroom 定义的声明式 RGB、LUT 与蒙板参数，经过大小、类型和完整性校验后才会导入，不包含脚本、插件二进制或可执行模型。</p></details>
 <details><summary>基础调整是否与 Adobe Camera Raw 数值兼容？</summary><p>不兼容。Siftroom 使用自己的摄影显影引擎：曝光采用 EV，高光、阴影、白色、黑色按亮度区域处理，对比度使用自适应中灰 S 曲线。它面向快速审阅和批量统一，不宣称复制 Adobe 的私有相机配置与 Process Version。</p></details>
-<details><summary>Siftroom 会上传照片或收集使用数据吗？</summary><p>不会。图像分析和显影在本地完成；应用不含账号、广告或第三方分析 SDK。只有你主动提交支持表单时，网站才会保存你填写的联系邮箱和问题内容。</p></details>
-</section>
+<details><summary>Siftroom 会上传照片或收集使用数据吗？</summary><p>不向我们的服务器上传照片或使用记录。照片处理在本机完成，不要求注册 Siftroom 账号，也不接入第三方广告或分析 SDK。地图搜索与地址解析使用 Apple 服务，购买由 App Store 处理。支持表单仅保存你主动提交的信息。</p></details>
+<details><summary>在哪里设置拍摄位置？</summary><p>打开照片后，在“操作 → 水印与位置 → 拍摄位置”搜索地点或地图选点，也可选择“Mac 当前定位”请求系统定位授权。位置用于写入导出的副本；Mac 当前位置不等于照片的实际拍摄地。</p></details></section>
 <section class="content-section" id="contact">
 <p class="eyebrow">04 / CONTACT</p>
 <h2>提交支持请求</h2>
 <p>请不要上传原片或包含敏感信息的文件。描述你的 macOS 版本、相机型号、文件格式和复现步骤即可。</p>
 <div class="support-form"><p>此镜像站不保存支持表单。请使用公开 GitHub 支持工单，不要提交邮箱、原片或其他敏感信息。</p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">打开支持工单</a></div>
-
 </section>
 </div>
 </div>
