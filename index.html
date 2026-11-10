@@ -5,12 +5,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Siftroom — 轻量选片工具</title>
-<meta content="打开，就只剩照片。Siftroom 在 Mac 的同一工作区完成 RAW 选片、本地 AI 降噪、样片配色与星轨合成。基础工作流免费，Pro 一次购买解锁。" name="description"/>
+<meta content="打开，就只剩照片。Siftroom 在 Mac 的同一工作区完成 RAW 选片、本地 AI 降噪、人像精修与星空合成。基础工作流免费，Pro 一次购买解锁。" name="description"/>
 <meta content="#080806" name="theme-color"/>
 <meta content="website" property="og:type"/>
 <meta content="zh_CN" property="og:locale"/>
 <meta content="Siftroom — 打开，就只剩照片" property="og:title"/>
-<meta content="一组照片，一个安静的工作区。样片配色、星轨合成与本地 AI 降噪，接上从导入到交付的工作流。" property="og:description"/>
+<meta content="一组照片，一个安静的工作区。在本机选片、精修人像、合成星轨，接上从导入到交付的工作流。" property="og:description"/>
 <meta content="https://siftroom.com/" property="og:url"/>
 <meta content="https://siftroom.com/assets/og-image.jpg" property="og:image"/>
 <link href="https://siftroom.com/" rel="canonical"/>
@@ -27,7 +27,7 @@
 <img alt="" height="36" src="/assets/icon-192.png" width="36"/>
 <span class="brand-lockup"><b>SIFTROOM</b><small>MAC · NATIVE</small></span>
 </a>
-<nav class="site-nav" data-menu="" id="site-nav"><a href="#workspace">工作区</a><a href="#sample-filters">配色</a><a href="#star-trails">星空</a><a href="#import">导入</a><a href="#denoise">降噪</a><a href="#pro">Pro</a><a href="/support/">支持</a><a class="nav-cta" href="https://apps.apple.com/cn/app/id6804907962" rel="noopener" target="_blank">App Store 下载</a></nav>
+<nav class="site-nav" data-menu="" id="site-nav"><a href="#workspace">工作区</a><a href="#sample-filters">配色</a><a href="#portrait">人像</a><a href="#star-trails">星空</a><a href="#import">导入</a><a href="#denoise">降噪</a><a href="#pro">Pro</a><a href="/support/">支持</a><a class="nav-cta" href="https://apps.apple.com/cn/app/id6804907962" rel="noopener" target="_blank">App Store 下载</a></nav>
 <div class="header-actions"><a aria-label="Switch to English" class="language-switch" data-language-switch="" href="/en/" hreflang="en" lang="en"><span class="language-current" lang="zh-Hans">中</span><span aria-hidden="true" class="language-divider">/</span><span>EN</span></a><button aria-controls="site-nav" aria-expanded="false" class="menu-toggle" data-menu-toggle="" type="button">
 <span></span><span></span><span></span><span class="sr-only">打开导航</span>
 </button></div></header>
@@ -47,7 +47,7 @@
 <dl class="hero-facts" data-reveal="">
 <div><dt>01</dt><dd>同一个窗口，接着做</dd></div>
 <div><dt>02</dt><dd>本地 AI 降噪</dd></div>
-<div><dt>03</dt><dd>基础星轨合成免费</dd></div>
+<div><dt>03</dt><dd>本地人像精修</dd></div>
 </dl>
 </div>
 <div aria-hidden="true" class="hero-badge"><i></i><span>LIGHT TABLE / READY</span></div>
@@ -170,6 +170,26 @@
   </span>
 </a>
 </section>
+<section aria-labelledby="portrait-title" class="feature-story section-shell" id="portrait">
+<div class="section-heading" data-reveal="">
+<div><p class="eyebrow">PORTRAIT / ON DEVICE</p><h2 id="portrait-title">修匀肤质，<br/><em>留住细节。</em></h2></div>
+<p>自然磨皮、均匀肤色和轻度瘦脸都在本机完成。合照里可以逐人调整，放大同一区域查看处理前后。</p>
+</div>
+<div class="feature-access" data-reveal="">
+<span class="free-label">基础人像精修免费</span>
+<span class="feature-pro-access"><span class="pro-label">PRO</span><span>分区脸型 · 批量肤质</span></span>
+</div>
+<figure class="product-frame" data-reveal="">
+<img alt="Siftroom 人像精修实机界面，包含前后对比与肤质滑块" decoding="async" height="1050" loading="lazy" src="/assets/portrait-retouch-v220.webp" width="1680"/>
+<figcaption>示例由 Siftroom 在本机渲染。原片来自 <a href="https://www.pexels.com/photo/charming-woman-with-freckles-in-room-6001808/" rel="noopener" target="_blank">Sam Lion / Pexels</a></figcaption>
+</figure>
+<div class="feature-rail" data-reveal="">
+<article><b>修整局部肤质</b><p>磨皮与均匀肤色分开控制，柔化纹理和局部色差，保留皮肤细节与光影。</p></article>
+<article><b>沿轮廓轻轻收拢</b><p>轻度瘦脸沿识别到的轮廓连续调整，适用于接近正面的人脸。Pro 可分别微调脸颊与下颌。</p></article>
+<article><b>同一组照片，统一肤质</b><p>Pro 可把磨皮和均匀肤色应用到所选照片。每张照片独立识别人脸，跳过合照与识别不清的照片。</p></article>
+</div>
+<a class="text-link" href="/support/#portrait-help">了解人像精修 <span aria-hidden="true">↗</span></a>
+</section>
 <section aria-labelledby="trails-title" class="feature-story section-shell" id="star-trails">
 <div class="section-heading" data-reveal="">
 <div>
@@ -177,42 +197,41 @@
     NIGHT SKY / IN MOTION
    </p>
 <h2 id="trails-title">
-    让星光留下轨迹，
+    一组星空照片，
     <br/>
 <em>
-     让地景留在原处。
+     两种合成方式。
     </em>
 </h2>
 </div>
 <p>
-   固定机位连续拍摄的照片，在本机汇成星轨。结果直接留在工作区，导出 16 位 TIFF 后还可以继续调整。
+   在「星空」里切换星轨合成与星点对齐。让星光延伸成渐隐的拖尾，或把星点对齐后叠加降噪。两种模式都可以导出 16 位 TIFF。
   </p>
 </div>
 <div class="feature-access" data-reveal="">
 <span class="free-label">
-   基础合成免费
+   星轨合成与彗星拖尾免费
   </span>
 <span class="feature-pro-access"><span class="pro-label">
    PRO
   </span><span>
-   干净地景 · 画笔与橡皮擦 · 边缘羽化
+   星点对齐降噪 · 星轨地景保护
   </span></span>
 </div>
-<figure class="product-frame capture-product" data-reveal="">
-<div class="capture-window" style="--capture-trim:2.144772%">
-<img alt="Siftroom 已导出的星轨成片，保留湖面与山体地景" decoding="async" height="987" loading="lazy" src="/assets/star-trails-v211.webp" width="1680"/>
-</div>
+<figure class="product-frame" data-reveal="">
+<img alt="Siftroom 星空工作区中的山湖彗星拖尾成片和模式切换" decoding="async" height="1050" loading="lazy" src="/assets/astro-v220.webp" width="1680"/>
 <figcaption>
-   图示为实际导出成片，开启了 Pro 地景保护。
-  </figcaption>
+   Siftroom 用延时摄影帧合成的彗星拖尾成片。示例素材来自
+   <a href="https://www.pexels.com/video/beautiful-timelapse-of-the-night-sky-with-reflections-in-a-lake-857251/" rel="noopener" target="_blank">eberhard grossgasteiger / Pexels</a>
+</figcaption>
 </figure>
 <div class="feature-rail" data-reveal="">
 <article>
 <b>
-    让星星继续走
+    让星轨渐隐
    </b>
 <p>
-    变亮叠加保留星星随时间移动的轨迹，适合固定三脚架的连续拍摄。
+    固定机位的照片可合成传统星轨，也可加入彗星拖尾。调节渐隐强度，或反转拖尾方向。
    </p>
 </article>
 <article>
@@ -225,10 +244,10 @@
 </article>
 <article>
 <b>
-    边界由你确认
+    对齐后再叠加
    </b>
 <p>
-    用画笔添加保护，用橡皮擦移除多余区域；支持羽化与逐笔撤销。
+    星点对齐模式会叠加多帧来降低噪声。处理记录列出实际参与合成的照片和排除原因。
    </p>
 </article>
 </div>
@@ -254,7 +273,7 @@
 </h2>
 </div>
 <p>
-   智能选片、样片滤镜、智能工坊、星空堆栈与星轨地景保护。一次购买，解锁更完整的本地摄影工作流。
+   智能选片、样片滤镜、智能工坊、进阶人像与星空处理。一次购买，解锁更完整的本地摄影工作流。
   </p>
 </div>
 <div class="access-summary" data-reveal="">
@@ -263,7 +282,7 @@
     基础工作流免费
    </b>
 <p>
-    照片浏览、手动选片、导入、项目、本地 AI 降噪、基础星轨合成与导出免费。样片滤镜可免费预览，无需注册 Siftroom 账号。
+    照片浏览、手动选片、导入、项目、本地 AI 降噪、基础人像精修、星轨合成与导出免费。样片滤镜可免费预览。
    </p>
 </article>
 <article>
@@ -285,6 +304,7 @@
 <a class="text-link" href="#star-trails">
    星轨地景保护
   </a>
+<a class="text-link" href="#portrait">分区脸型与批量肤质</a>
 </div>
 <div class="studio-grid">
 <article class="studio-feature" data-reveal="">
