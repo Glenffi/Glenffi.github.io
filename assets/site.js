@@ -1,80 +1,161 @@
 (() => {
-  const english = document.documentElement.lang === "en";
-  const words = (zh, en) => english ? en : zh;
-  const languageLink = document.querySelector("[data-language-switch]");
-  if (languageLink) {
-    const target = new URL(languageLink.href);
-    const preserveSection = () => { languageLink.href = target.pathname + window.location.hash; };
-    preserveSection();
-    window.addEventListener("hashchange", preserveSection);
+  'use strict';
+  const en = document.documentElement.lang === 'en';
+  const say = (zh, english) => en ? english : zh;
+  const locale = en ? '/en' : '';
+  const languageLink = document.querySelector('[data-language-switch]');
+  const languagePath = languageLink ? new URL(languageLink.href).pathname : '';
+  const syncLanguage = () => { if (languageLink) languageLink.href = languagePath + location.hash; };
+  syncLanguage();
+  window.addEventListener('hashchange', syncLanguage);
+
+  // Keep previously shared homepage anchors useful after the long page retires.
+  if (location.pathname === '/' || location.pathname === '/en/') {
+    const old = {workspace:'workspace',workflow:'workspace',compare:'workspace',develop:'sample-filters',filters:'sample-filters','sample-filters':'sample-filters',portrait:'portrait',denoise:'denoise','star-trails':'star-trails',import:'import',delivery:'delivery'};
+    const section = location.hash.slice(1);
+    if (old[section]) { location.replace(locale + '/explore/#' + old[section]); return; }
+    if (section === 'pro') { location.replace(locale + '/pro/'); return; }
+    if (section === 'local') { location.replace(locale + '/privacy/'); return; }
+    if (section === 'manifest') { location.replace(locale + '/devices/'); return; }
   }
-  const header = document.querySelector("[data-header]");
-  const menu = document.querySelector("[data-menu]");
-  const menuToggle = document.querySelector("[data-menu-toggle]");
 
-  const syncHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 24);
-  syncHeader();
-  window.addEventListener("scroll", syncHeader, { passive: true });
-
-  menuToggle?.addEventListener("click", () => {
-    const open = menu?.classList.toggle("is-open") ?? false;
-    menuToggle.setAttribute("aria-expanded", String(open));
+  const menu = document.querySelector('[data-menu]');
+  const toggle = document.querySelector('[data-menu-toggle]');
+  function closeMenu(focus = false) {
+    menu?.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    if (focus) toggle?.focus();
+  }
+  toggle?.addEventListener('click', event => {
+    const open = !menu.classList.contains('is-open');
+    menu.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    if (open && event.detail === 0) menu.querySelector('a')?.focus();
   });
-  menu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-    menu.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu?.classList.contains('is-open')) closeMenu(true); });
+  document.addEventListener('click', event => { if (!event.target.closest('.site-header')) closeMenu(); });
+  menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
+  window.matchMedia('(min-width: 801px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+
+  document.querySelectorAll('[data-gallery]').forEach(gallery => {
+    const links = [...gallery.querySelectorAll('[data-gallery-link]')];
+    const panels = [...gallery.querySelectorAll('[data-gallery-panel]')];
+    if (!links.length || !panels.length) return;
+    const nav = links[0].parentElement;
+    nav.setAttribute('role', 'tablist');
+    const findPanel = hash => {
+      let id;
+      try { id = decodeURIComponent(hash.replace(/^#/, '')); } catch { return null; }
+      const target = document.getElementById(id);
+      return panels.find(panel => panel.id === id || (target && panel.contains(target)));
+    };
+    function activate(panel, mode = '', focus = false) {
+      if (!panel) return;
+      gallery.classList.add('is-enhanced');
+      panels.forEach(item => {
+        item.hidden = item !== panel;
+        item.setAttribute('role', 'tabpanel');
+        const tab = links.find(link => link.hash === '#' + item.id);
+        if (tab) item.setAttribute('aria-labelledby', tab.id);
+      });
+      links.forEach(link => {
+        const selected = link.hash === '#' + panel.id;
+        link.setAttribute('role', 'tab');
+        link.setAttribute('aria-controls', link.hash.slice(1));
+        link.setAttribute('aria-selected', String(selected));
+        link.tabIndex = selected ? 0 : -1;
+        if (selected && focus) link.focus();
+      });
+      if (mode && location.hash !== '#' + panel.id) history[mode + 'State'](null, '', '#' + panel.id);
+      const stage = panel.closest('.document-stage');
+      if (stage) stage.scrollTop = 0;
+      syncLanguage();
+    }
+    links.forEach((link, index) => {
+      link.addEventListener('click', event => {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        const panel = findPanel(link.hash);
+        if (!panel) return;
+        event.preventDefault(); activate(panel, 'push');
+      });
+      link.addEventListener('keydown', event => {
+        let next;
+        if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % links.length;
+        if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + links.length) % links.length;
+        if (event.key === 'Home') next = 0;
+        if (event.key === 'End') next = links.length - 1;
+        if (next === undefined) return;
+        event.preventDefault(); activate(findPanel(links[next].hash), 'replace', true);
+      });
+    });
+    const readLocation = () => activate(findPanel(location.hash) || panels[0]);
+    window.addEventListener('hashchange', readLocation);
+    window.addEventListener('popstate', readLocation);
+    readLocation();
+  });
+
+  document.querySelectorAll('[data-comparison]').forEach(comparison => {
+    const range = comparison.querySelector('input[type=range]');
+    const update = () => {
+      const value = Math.min(100, Math.max(0, Number(range.value)));
+      comparison.style.setProperty('--split', value + '%');
+      range.setAttribute('aria-valuetext', say('原图 ' + value + '%，处理后 ' + (100 - value) + '%', value + '% original, ' + (100 - value) + '% edited'));
+    };
+    range.addEventListener('input', update); update();
+  });
+
+  let lightbox;
+  document.querySelectorAll('[data-lightbox]').forEach(trigger => trigger.addEventListener('click', event => {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const source = trigger.querySelector('img');
+    if (!source || typeof HTMLDialogElement === 'undefined') return;
+    event.preventDefault();
+    if (!lightbox) {
+      lightbox = document.createElement('dialog');
+      lightbox.className = 'lightbox';
+      const close = document.createElement('button');
+      close.className = 'dialog-close'; close.type = 'button'; close.textContent = '×';
+      close.setAttribute('aria-label', say('关闭大图', 'Close enlarged image'));
+      close.addEventListener('click', () => lightbox.close());
+      const picture = document.createElement('img');
+      const caption = document.createElement('p'); caption.id = 'lightbox-caption';
+      lightbox.append(close, picture, caption);
+      lightbox.setAttribute('aria-labelledby', caption.id);
+      lightbox.addEventListener('click', event => { if (event.target === lightbox) lightbox.close(); });
+      document.body.append(lightbox);
+    }
+    const picture = lightbox.querySelector('img');
+    picture.src = source.currentSrc || source.src; picture.alt = source.alt;
+    lightbox.querySelector('p').textContent = source.alt;
+    lightbox.addEventListener('close', () => trigger.focus(), {once:true});
+    lightbox.showModal();
   }));
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const reveals = document.querySelectorAll("[data-reveal]");
-  if (reduceMotion || !("IntersectionObserver" in window)) {
-    reveals.forEach((element) => element.classList.add("is-visible"));
-  } else {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: .12, rootMargin: "0px 0px -6%" });
-    reveals.forEach((element) => observer.observe(element));
+  // The existing same-origin support endpoint is preserved. No requests occur
+  // until the visitor explicitly submits the form; the static mirror has none.
+  const form = document.querySelector('[data-support-form]');
+  if (!form) return;
+  if (location.hostname === 'glenffi.github.io') {
+    form.innerHTML = say('<p>此镜像站不保存支持表单。请使用公开支持工单，并勿填写邮箱、原片或其他敏感信息。</p><a class="button button-secondary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">打开支持工单 ↗</a>', '<p>This mirror does not store support forms. Use the public support tracker without sharing email addresses, original photos or other sensitive information.</p><a class="button button-secondary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">Open a support issue ↗</a>');
+    return;
   }
-
-  const form = document.querySelector("[data-support-form]");
-  if (form) {
-    if (window.location.hostname === "glenffi.github.io") {
-      form.innerHTML = english ? `<p><strong>Public support tracker</strong></p><p>This mirror does not store support forms. Public issues must not include email addresses, original photos, serial numbers or other sensitive information.</p><p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">Open a support issue</a></p>` : `
-        <p><strong>临时公开支持通道</strong></p>
-        <p>此镜像站不保存支持表单，请使用 GitHub 支持工单。工单内容公开，请勿填写邮箱、原片、序列号或其他敏感信息。</p>
-        <p><a class="button button-primary" href="https://github.com/Glenffi/Glenffi.github.io/issues/new/choose">打开 Siftroom 支持工单</a></p>
-      `;
-      return;
-    }
-    const status = form.querySelector("[data-form-status]");
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const button = form.querySelector("button[type='submit']");
-      const data = Object.fromEntries(new FormData(form).entries());
-      button.disabled = true;
-      status.className = "form-status";
-      status.textContent = words("正在提交…", "Sending…");
-      try {
-        const response = await fetch("/api/support", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-        const result = await response.json();
-        if (!response.ok) throw new Error(result.error || "提交失败");
-        form.reset();
-        status.classList.add("is-success");
-        status.textContent = words(`已收到。支持编号：${result.ticket}`, `Received. Ticket: ${result.ticket}`);
-      } catch {
-        status.classList.add("is-error");
-        status.innerHTML = words('在线表单暂时不可用。请前往 <a class="text-link" href="https://github.com/Glenffi/Glenffi.github.io/issues/new">Siftroom 公开支持工单</a>，且不要提交隐私信息。', 'The support form is unavailable. Use the <a class="text-link" href="https://github.com/Glenffi/Glenffi.github.io/issues/new">public support tracker</a> without sharing sensitive information.');
-      } finally {
-        button.disabled = false;
-      }
-    });
-  }
+  const status = form.querySelector('[data-form-status]');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const button = form.querySelector('button[type=submit]');
+    const data = Object.fromEntries(new FormData(form).entries());
+    button.disabled = true;
+    status.className = 'form-status'; status.textContent = say('正在提交…', 'Sending…');
+    try {
+      const response = await fetch('/api/support', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+      const result = await response.json();
+      if (!response.ok || !result.ticket) throw new Error('Support unavailable');
+      form.reset(); status.classList.add('is-success');
+      status.textContent = say('已收到。支持编号：', 'Received. Ticket: ') + result.ticket;
+    } catch {
+      status.classList.add('is-error');
+      status.textContent = say('暂时无法提交，已保留你填写的内容。可以稍后重试，或使用下方公开支持工单。', 'Unable to send right now. Your message has been kept. Try again later, or use the public support tracker below.');
+    } finally { button.disabled = false; }
+  });
 })();

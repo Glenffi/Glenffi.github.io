@@ -1,10 +1,10 @@
 {
-  "name": "Siftroom — Photo Culling",
+  "name": "Siftroom — Open up. Only photos.",
   "short_name": "Siftroom",
   "start_url": "/en/",
   "display": "standalone",
-  "background_color": "#080806",
-  "theme_color": "#080806",
+  "background_color": "#101210",
+  "theme_color": "#101210",
   "icons": [
     {
       "src": "/assets/icon-192.png",

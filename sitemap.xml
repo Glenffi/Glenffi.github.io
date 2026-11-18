@@ -1,43 +1,99 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://siftroom.com/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/"/>
+  <url>
+    <loc>https://siftroom.com/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/" />
   </url>
-  <url><loc>https://siftroom.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/"/>
+  <url>
+    <loc>https://siftroom.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/" />
   </url>
-  <url><loc>https://siftroom.com/support/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/support/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/support/"/>
+  <url>
+    <loc>https://siftroom.com/explore/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/explore/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/explore/" />
   </url>
-  <url><loc>https://siftroom.com/en/support/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/support/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/support/"/>
+  <url>
+    <loc>https://siftroom.com/en/explore/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/explore/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/explore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/explore/" />
   </url>
-  <url><loc>https://siftroom.com/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/privacy/"/>
+  <url>
+    <loc>https://siftroom.com/devices/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/devices/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/devices/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/devices/" />
   </url>
-  <url><loc>https://siftroom.com/en/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/privacy/"/>
+  <url>
+    <loc>https://siftroom.com/en/devices/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/devices/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/devices/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/devices/" />
   </url>
-  <url><loc>https://siftroom.com/changelog/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/changelog/"/>
+  <url>
+    <loc>https://siftroom.com/pro/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/pro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/pro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/pro/" />
   </url>
-  <url><loc>https://siftroom.com/en/changelog/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/changelog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/changelog/"/>
+  <url>
+    <loc>https://siftroom.com/en/pro/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/pro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/pro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/pro/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/download/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/download/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/download/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/download/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/en/download/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/download/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/download/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/download/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/support/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/support/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/en/support/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/support/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/privacy/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/privacy/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/changelog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/changelog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/changelog/" />
+  </url>
+  <url>
+    <loc>https://siftroom.com/en/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://siftroom.com/changelog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://siftroom.com/en/changelog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://siftroom.com/changelog/" />
   </url>
 </urlset>
