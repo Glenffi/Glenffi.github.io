@@ -43,6 +43,25 @@
     if (!links.length || !panels.length) return;
     const nav = links[0].parentElement;
     nav.setAttribute('role', 'tablist');
+    const signatureViewer = gallery.querySelector('[data-signature-viewer]');
+    const lookLinks = [...gallery.querySelectorAll('[data-look-link]')];
+    const lookScenes = [...gallery.querySelectorAll('[data-look-scene]')];
+
+    function selectLook() {
+      const selected = lookScenes.find(scene => '#' + scene.id === location.hash) || lookScenes[0];
+      signatureViewer.classList.add('is-enhanced');
+      for (const scene of lookScenes) scene.hidden = scene !== selected;
+      for (const link of lookLinks) {
+        if (link.hash === '#' + selected.id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      }
+      const current = lookLinks.find(link => link.hash === '#' + selected.id);
+      const reel = current.parentElement;
+      const viewport = reel.getBoundingClientRect();
+      const tile = current.getBoundingClientRect();
+      reel.scrollLeft += Math.max(0, tile.right - viewport.right) + Math.min(0, tile.left - viewport.left);
+      reel.scrollTop += Math.max(0, tile.bottom - viewport.bottom) + Math.min(0, tile.top - viewport.top);
+    }
     const findPanel = hash => {
       let id;
       try { id = decodeURIComponent(hash.replace(/^#/, '')); } catch { return null; }
@@ -69,6 +88,7 @@
       if (mode && location.hash !== '#' + panel.id) history[mode + 'State'](null, '', '#' + panel.id);
       const stage = panel.closest('.document-stage');
       if (stage) stage.scrollTop = 0;
+      if (signatureViewer && panel.contains(signatureViewer)) selectLook();
       syncLanguage();
     }
     links.forEach((link, index) => {
@@ -89,6 +109,14 @@
       });
     });
     const readLocation = () => activate(findPanel(location.hash) || panels[0]);
+    for (const link of lookLinks) {
+      link.addEventListener('click', event => {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+        readLocation();
+      });
+    }
     window.addEventListener('hashchange', readLocation);
     window.addEventListener('popstate', readLocation);
     readLocation();
@@ -101,7 +129,9 @@
       comparison.style.setProperty('--split', value + '%');
       range.setAttribute('aria-valuetext', say('原图 ' + value + '%，处理后 ' + (100 - value) + '%', value + '% original, ' + (100 - value) + '% edited'));
     };
-    range.addEventListener('input', update); update();
+    range.addEventListener('input', update);
+    update();
+    comparison.classList.add('is-interactive');
   });
 
   let lightbox;

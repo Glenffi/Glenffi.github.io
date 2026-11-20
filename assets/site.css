@@ -779,6 +779,193 @@ html[lang="en"] .cover-note {
   outline:2px solid var(--accent);
   outline-offset:4px
 }
+.signature-panel {
+  grid-template-rows:auto minmax(0,1fr) auto;
+  gap:clamp(12px,1.5vw,22px);
+}
+.signature-viewer {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) clamp(154px,14vw,232px);
+  grid-template-rows:minmax(0,1fr);
+  min-height:0;
+  min-width:0;
+  gap:16px;
+}
+.signature-scenes {
+  min-height:0;
+}
+.signature-scene {
+  display:grid;
+  grid-template-rows:minmax(0,1fr) auto;
+  height:100%;
+  margin:0;
+  gap:8px;
+}
+.signature-scene .image-comparison {
+  --split:38%;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:4px;
+}
+.signature-scene figcaption {
+  display:flex;
+  align-items:baseline;
+  gap:8px 14px;
+  flex-wrap:wrap;
+  min-width:0;
+  color:var(--muted);
+  font-size:12px;
+}
+.signature-scene figcaption strong {
+  color:var(--ink);
+}
+.signature-scene figcaption a {
+  margin-inline-start:auto;
+  color:var(--muted);
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.signature-reel {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-content:start;
+  gap:8px;
+  padding:2px;
+  min-height:0;
+  min-width:0;
+  overflow:auto;
+  scrollbar-width:thin;
+  scrollbar-color:var(--line) transparent;
+}
+.signature-reel a {
+  display:grid;
+  align-content:start;
+  gap:6px;
+  padding:4px;
+  border:1px solid transparent;
+  border-radius:3px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.25;
+}
+.signature-reel img {
+  width:100%;
+  height:clamp(31px,6vh,66px);
+  object-fit:cover;
+}
+.signature-reel a:focus-visible {
+  outline-offset:-1px;
+}
+.signature-reel a:hover,.signature-reel a[aria-current="true"] {
+  border-color:var(--line);
+  color:var(--ink);
+}
+.signature-reel a[aria-current="true"] {
+  border-color:var(--accent);
+}
+.signature-access {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:8px 18px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  font-size:12px;
+}
+.pro-filter-note {
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+}
+.pro-filter-note .text-link {
+  display:inline-block;
+  margin-top:6px;
+}
+.signature-viewer:not(.is-enhanced) .signature-scene:not(:first-child):not(:target),
+.signature-viewer:not(.is-enhanced):has(.signature-scene:target) .signature-scene:first-child:not(:target),
+.gallery-layout:not(.is-enhanced) .gallery-stage:has(.signature-scene:target)>[data-gallery-panel]:first-child {
+  display:none;
+}
+.gallery-layout:not(.is-enhanced) .gallery-stage:has(.signature-scene:target)>.signature-panel {
+  display:grid;
+}
+@media(max-width:800px) {
+  .signature-panel {
+    grid-template-rows:auto;
+  }
+  .signature-viewer {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto auto;
+    gap:12px;
+  }
+  .signature-scene {
+    height:auto;
+  }
+  .signature-scene .image-comparison {
+    aspect-ratio:3/2;
+  }
+  .signature-reel {
+    grid-template-columns:none;
+    grid-auto-flow:column;
+    grid-auto-columns:88px;
+    padding-bottom:6px;
+  }
+  .signature-reel img {
+    height:47px;
+  }
+}
+.image-comparison:not(.is-interactive) input,
+.image-comparison:not(.is-interactive) .comparison-divider>span {
+  display:none;
+}
+.series-example {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  width:min(100%, 800px);
+  height:100%;
+  min-height:0;
+  gap:1px;
+  background:var(--line);
+}
+.series-reference {
+  min-height:0;
+  position:relative;
+}
+.series-reference,.series-example .image-comparison {
+  background:#080a08;
+}
+.series-reference>img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.visual-series-consistency .image-comparison>img,
+.signature-scene .image-comparison>img {
+  object-fit:contain;
+}
+.guide-capture {
+  margin:24px 0 0;
+}
+.guide-capture a[data-lightbox] {
+  display:block;
+  border:1px solid var(--line);
+  border-radius:4px;
+  overflow:hidden;
+}
+.guide-capture img {
+  display:block;
+  width:100%;
+  height:auto;
+}
+.guide-capture figcaption {
+  margin-top:9px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+}
 .lightbox {
   border:1px solid var(--line);
   border-radius:8px;
